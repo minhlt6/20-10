@@ -1599,15 +1599,17 @@ class WomensDayExperienceApp {
     createButtons(modalList, true);
   }
 
-  selectRecipient(person) {
+  selectRecipient(person, playSound = true) {
     this.selectedRecipient = person;
     this.renderRecipientSelectors();
 
     const topLabel = document.getElementById("current-recipient-label");
     const headline = document.getElementById("ch2-greeting-line-1");
     const personalNote = document.getElementById("ch2-personal-note");
+    const prologueNameInput = document.getElementById("prologue-name-input");
+    const wishAuthorInput = document.getElementById("wish-author-input");
 
-    if (person.name === "Bạn") {
+    if (person.name === "Bạn" || person.name === "Tất cả các bạn nữ") {
       if (topLabel) topLabel.textContent = "Dành tặng: Bạn";
       if (headline) headline.textContent = this.config.mainGreeting.headline;
       if (personalNote) {
@@ -1626,9 +1628,36 @@ class WomensDayExperienceApp {
           person.note ||
           `Chúc ${person.name} có một ngày 20/10 thật ngọt ngào, luôn giữ vững nụ cười rạng rỡ và thực hiện được mọi điều bạn mong ước nhé! ✨`;
       }
+      if (prologueNameInput && prologueNameInput.value.trim() !== person.name) {
+        prologueNameInput.value = person.name;
+      }
+      if (wishAuthorInput && wishAuthorInput.value.trim() !== person.name) {
+        wishAuthorInput.value = person.name;
+      }
+      try {
+        localStorage.setItem("womens_day_20_10_recipient_name", person.name);
+      } catch (err) {}
     }
 
-    this.audio.playFlowerChime(2);
+    if (playSound) {
+      this.audio.playFlowerChime(2);
+    }
+  }
+
+  applyCustomRecipientName(rawName, playSound = false) {
+    const cleanName = (rawName || "").trim();
+    if (!cleanName) return;
+    let existing = this.config.femaleClassmates.find(
+      (p) => p.name.toLowerCase() === cleanName.toLowerCase()
+    );
+    if (!existing) {
+      existing = {
+        name: cleanName,
+        note: `Chúc ${cleanName} có một ngày 20/10 ngập tràn niềm vui, luôn xinh đẹp rạng ngời và hạnh phúc trên hành trình thanh xuân của mình nhé! 💖`
+      };
+      this.config.femaleClassmates.push(existing);
+    }
+    this.selectRecipient(existing, playSound);
   }
 
   // 4. Chương 1: Chữ gõ từng ký tự & Mở hộp quà 3D
@@ -1659,9 +1688,25 @@ class WomensDayExperienceApp {
     const giftWrapper = document.getElementById("prologue-gift-wrapper");
     const openBtn = document.getElementById("btn-open-secret-gift");
     const skipBtn = document.getElementById("btn-skip-intro");
+    const prologueNameInput = document.getElementById("prologue-name-input");
+
+    // Khôi phục tên người nhận đã lưu trước đó (nếu có)
+    try {
+      const savedName = localStorage.getItem("womens_day_20_10_recipient_name");
+      if (savedName && savedName.trim() !== "") {
+        this.applyCustomRecipientName(savedName, false);
+      }
+    } catch (err) {}
+
+    const syncPrologueName = () => {
+      if (prologueNameInput && prologueNameInput.value.trim() !== "") {
+        this.applyCustomRecipientName(prologueNameInput.value.trim(), false);
+      }
+    };
 
     const handleOpenSecretGift = () => {
       if (this.isOpeningPrologueGift) return;
+      syncPrologueName();
       this.isOpeningPrologueGift = true;
       this.prologueCompleted = true;
 
@@ -1695,6 +1740,15 @@ class WomensDayExperienceApp {
     };
 
     if (openBtn) openBtn.addEventListener("click", handleOpenSecretGift);
+    if (prologueNameInput) {
+      prologueNameInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          handleOpenSecretGift();
+        }
+      });
+      prologueNameInput.addEventListener("blur", syncPrologueName);
+    }
     if (giftWrapper) {
       giftWrapper.addEventListener("click", handleOpenSecretGift);
       giftWrapper.addEventListener("keydown", (e) => {
@@ -1707,6 +1761,7 @@ class WomensDayExperienceApp {
 
     if (skipBtn) {
       skipBtn.addEventListener("click", () => {
+        syncPrologueName();
         this.prologueCompleted = true;
         this.transitionToChapter(2, true);
       });
@@ -2175,15 +2230,27 @@ class WomensDayExperienceApp {
     }
 
     if (form && input) {
+      const authorInput = document.getElementById("wish-author-input");
+      if (authorInput) {
+        authorInput.addEventListener("blur", () => {
+          if (authorInput.value.trim() !== "") {
+            this.applyCustomRecipientName(authorInput.value.trim(), false);
+          }
+        });
+      }
+
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         const text = input.value.trim() || "Luôn xinh đẹp, hạnh phúc và rạng rỡ mỗi ngày! ✨";
         if (confirmBox) confirmBox.hidden = true;
 
+        if (authorInput && authorInput.value.trim() !== "") {
+          this.applyCustomRecipientName(authorInput.value.trim(), false);
+        }
+
         const authorName =
-          this.selectedRecipient.name === "Bạn"
-            ? "Bạn"
-            : this.selectedRecipient.name;
+          (authorInput && authorInput.value.trim()) ||
+          (this.selectedRecipient.name === "Bạn" ? "Bạn" : this.selectedRecipient.name);
         const nowStr = new Date().toLocaleString("vi-VN", {
           hour: "2-digit",
           minute: "2-digit",

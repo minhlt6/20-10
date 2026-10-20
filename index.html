@@ -141,8 +141,21 @@
         <span class="typewriter-cursor" id="prologue-cursor" aria-hidden="true">|</span>
       </div>
 
-      <!-- Nút Mở Món Quà Bí Mật -->
+      <!-- Ô nhập tên & Nút Mở Món Quà Bí Mật -->
       <div class="prologue-cta-wrap" id="prologue-cta-wrap">
+        <div class="prologue-name-box">
+          <label for="prologue-name-input" class="prologue-name-label">
+            ✨ Nhập tên của bạn để nhận món quà dành riêng cho mình nhé:
+          </label>
+          <input
+            type="text"
+            id="prologue-name-input"
+            class="wish-input prologue-name-input"
+            placeholder="Tên hoặc biệt danh của bạn (ví dụ: Minh Anh 🌸)..."
+            maxlength="50"
+            autocomplete="name"
+          />
+        </div>
         <button type="button" class="btn-magical-primary" id="btn-open-secret-gift">
           <span class="btn-shimmer" aria-hidden="true"></span>
           <span class="btn-text">Mở món quà bí mật 🎁</span>
@@ -373,18 +386,33 @@
           </div>
 
           <form id="wish-form" class="wish-input-group" novalidate>
-            <input
-              type="text"
-              id="wish-input"
-              class="wish-input"
-              placeholder="Viết điều ước của bạn vào đây... (ví dụ: Luôn bình an, hạnh phúc và đi du lịch thật nhiều nơi ✨)"
-              maxlength="160"
-              autocomplete="off"
-            />
-            <button type="submit" class="btn-magical-primary btn-send-wish" id="btn-send-wish">
-              <span class="btn-shimmer" aria-hidden="true"></span>
-              <span class="btn-text">Gửi điều ước lên bầu trời 🌟</span>
-            </button>
+            <div class="wish-fields-stack">
+              <div class="wish-author-row">
+                <label for="wish-author-input" class="wish-author-label">🌸 Tên của bạn:</label>
+                <input
+                  type="text"
+                  id="wish-author-input"
+                  class="wish-input wish-author-input"
+                  placeholder="Nhập tên của bạn (để lưu kèm điều ước)..."
+                  maxlength="50"
+                  autocomplete="name"
+                />
+              </div>
+              <div class="wish-message-row">
+                <input
+                  type="text"
+                  id="wish-input"
+                  class="wish-input"
+                  placeholder="Viết điều ước của bạn vào đây... (ví dụ: Luôn bình an, hạnh phúc và đi du lịch thật nhiều nơi ✨)"
+                  maxlength="160"
+                  autocomplete="off"
+                />
+                <button type="submit" class="btn-magical-primary btn-send-wish" id="btn-send-wish">
+                  <span class="btn-shimmer" aria-hidden="true"></span>
+                  <span class="btn-text">Gửi điều ước lên bầu trời 🌟</span>
+                </button>
+              </div>
+            </div>
           </form>
 
           <!-- Thông điệp phản hồi khi ngôi sao bay lên -->
