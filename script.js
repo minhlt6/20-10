@@ -81,7 +81,7 @@ const WOMENS_DAY_CONFIG = {
   //   + Cách B (Discord): Dán URL Webhook của kênh Discord vào `discordWebhookUrl`
   wishCollectorConfig: {
     storageKey: "womens_day_20_10_saved_wishes",
-    googleSheetWebAppUrl: "",
+    googleSheetWebAppUrl: "https://script.google.com/macros/s/AKfycbz1Vpq77AuyNZG16V7VjUIQvm9TxRTEweUjoF3fg4E8Apgt6LHWuGjFlrGM86GxUvQt/exec",
     discordWebhookUrl: ""
   }
 };
@@ -1961,16 +1961,18 @@ class WomensDayExperienceApp {
 
     // 1. Gửi về Google Sheets (thông qua Google Apps Script Web App)
     if (collector.googleSheetWebAppUrl && collector.googleSheetWebAppUrl.trim() !== "") {
+      const payload = {
+        className: this.config.className,
+        recipient: wishItem.author,
+        wish: wishItem.text,
+        createdAt: wishItem.time
+      };
+      // Dùng text/plain để tương thích 100% với mode: "no-cors" trên GitHub Pages & mọi trình duyệt di động
       fetch(collector.googleSheetWebAppUrl.trim(), {
         method: "POST",
         mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          className: this.config.className,
-          recipient: wishItem.author,
-          wish: wishItem.text,
-          createdAt: wishItem.time
-        })
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload)
       }).catch(() => {});
     }
 
