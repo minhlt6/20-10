@@ -143,24 +143,28 @@
 
       <!-- Ô nhập tên & Nút Mở Món Quà Bí Mật -->
       <div class="prologue-cta-wrap" id="prologue-cta-wrap">
-        <div class="prologue-name-box">
+        <div class="prologue-name-box" id="prologue-name-box">
           <label for="prologue-name-input" class="prologue-name-label">
-            ✨ Nhập tên của bạn để nhận món quà dành riêng cho mình nhé:
+            ✨ Nhập tên của bạn để mở món quà nhé:
           </label>
           <input
             type="text"
             id="prologue-name-input"
-            class="wish-input prologue-name-input"
-            placeholder="Tên hoặc biệt danh của bạn (ví dụ: Minh Anh 🌸)..."
+            class="prologue-name-input"
+            placeholder="Nhập tên của bạn..."
             maxlength="50"
             autocomplete="name"
+            required
           />
+          <p class="prologue-name-error" id="prologue-name-error" role="alert" hidden>
+            🌸 Bạn hãy nhập tên của mình trước khi mở quà nhé!
+          </p>
         </div>
         <button type="button" class="btn-magical-primary" id="btn-open-secret-gift">
           <span class="btn-shimmer" aria-hidden="true"></span>
           <span class="btn-text">Mở món quà bí mật 🎁</span>
         </button>
-        <p class="prologue-hint">Chạm vào hộp quà hoặc nút phía trên để đánh thức điều kỳ diệu</p>
+        <p class="prologue-hint">Nhập tên rồi chạm vào hộp quà hoặc nút phía trên để bắt đầu</p>
       </div>
     </div>
 

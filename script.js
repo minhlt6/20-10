@@ -1684,29 +1684,52 @@ class WomensDayExperienceApp {
     setTimeout(typeNext, 650);
   }
 
+  validatePrologueNameRequired() {
+    const prologueNameInput = document.getElementById("prologue-name-input");
+    const errorEl = document.getElementById("prologue-name-error");
+    const ctaWrap = document.getElementById("prologue-cta-wrap");
+
+    if (ctaWrap && !ctaWrap.classList.contains("visible")) {
+      ctaWrap.classList.add("visible");
+    }
+
+    const typedName = prologueNameInput ? prologueNameInput.value.trim() : "";
+    if (!typedName) {
+      if (errorEl) errorEl.hidden = false;
+      if (prologueNameInput) {
+        prologueNameInput.classList.remove("input-error-shake");
+        void prologueNameInput.offsetWidth;
+        prologueNameInput.classList.add("input-error-shake");
+        prologueNameInput.focus();
+      }
+      return false;
+    }
+
+    if (errorEl) errorEl.hidden = true;
+    this.applyCustomRecipientName(typedName, false);
+    return true;
+  }
+
   bindPrologueEvents() {
     const giftWrapper = document.getElementById("prologue-gift-wrapper");
     const openBtn = document.getElementById("btn-open-secret-gift");
     const skipBtn = document.getElementById("btn-skip-intro");
     const prologueNameInput = document.getElementById("prologue-name-input");
+    const errorEl = document.getElementById("prologue-name-error");
 
-    // Khôi phục tên người nhận đã lưu trước đó (nếu có)
-    try {
-      const savedName = localStorage.getItem("womens_day_20_10_recipient_name");
-      if (savedName && savedName.trim() !== "") {
-        this.applyCustomRecipientName(savedName, false);
-      }
-    } catch (err) {}
-
-    const syncPrologueName = () => {
-      if (prologueNameInput && prologueNameInput.value.trim() !== "") {
-        this.applyCustomRecipientName(prologueNameInput.value.trim(), false);
-      }
-    };
+    if (prologueNameInput) {
+      prologueNameInput.addEventListener("input", () => {
+        if (prologueNameInput.value.trim() !== "") {
+          if (errorEl) errorEl.hidden = true;
+          prologueNameInput.classList.remove("input-error-shake");
+        }
+      });
+    }
 
     const handleOpenSecretGift = () => {
       if (this.isOpeningPrologueGift) return;
-      syncPrologueName();
+      if (!this.validatePrologueNameRequired()) return;
+
       this.isOpeningPrologueGift = true;
       this.prologueCompleted = true;
 
@@ -1747,7 +1770,6 @@ class WomensDayExperienceApp {
           handleOpenSecretGift();
         }
       });
-      prologueNameInput.addEventListener("blur", syncPrologueName);
     }
     if (giftWrapper) {
       giftWrapper.addEventListener("click", handleOpenSecretGift);
@@ -1761,7 +1783,7 @@ class WomensDayExperienceApp {
 
     if (skipBtn) {
       skipBtn.addEventListener("click", () => {
-        syncPrologueName();
+        if (!this.validatePrologueNameRequired()) return;
         this.prologueCompleted = true;
         this.transitionToChapter(2, true);
       });
@@ -1770,6 +1792,10 @@ class WomensDayExperienceApp {
 
   // Chuyển cảnh mượt mà giữa các chương
   transitionToChapter(chapterNum, useCinematicVeil = false) {
+    if (this.currentChapter === 1 && chapterNum !== 1) {
+      if (!this.validatePrologueNameRequired()) return;
+    }
+
     const veil = document.getElementById("cinematic-veil");
     const prologueSection = document.getElementById("chapter-1");
 
@@ -2232,6 +2258,9 @@ class WomensDayExperienceApp {
     if (form && input) {
       const authorInput = document.getElementById("wish-author-input");
       if (authorInput) {
+        authorInput.addEventListener("input", () => {
+          authorInput.classList.remove("input-error-shake");
+        });
         authorInput.addEventListener("blur", () => {
           if (authorInput.value.trim() !== "") {
             this.applyCustomRecipientName(authorInput.value.trim(), false);
@@ -2241,6 +2270,14 @@ class WomensDayExperienceApp {
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
+        if (authorInput && authorInput.value.trim() === "") {
+          authorInput.classList.remove("input-error-shake");
+          void authorInput.offsetWidth;
+          authorInput.classList.add("input-error-shake");
+          authorInput.focus();
+          return;
+        }
+
         const text = input.value.trim() || "Luôn xinh đẹp, hạnh phúc và rạng rỡ mỗi ngày! ✨";
         if (confirmBox) confirmBox.hidden = true;
 
