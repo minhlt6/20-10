@@ -1733,6 +1733,109 @@ body:not(.in-prologue) .chapter-prologue:not(.revisiting-prologue) {
   color: var(--champagne-bright);
 }
 
+/* Sổ tay lưu giữ điều ước đã gửi */
+.saved-wishes-panel {
+  margin-top: 1.4rem;
+  padding: 1.15rem 1.25rem;
+  border-radius: 20px;
+  background: rgba(16, 8, 34, 0.58);
+  border: 1px solid rgba(246, 213, 142, 0.32);
+  text-align: left;
+}
+
+.saved-wishes-panel[hidden] {
+  display: none !important;
+}
+
+.saved-wishes-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 224, 238, 0.16);
+}
+
+.saved-wishes-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--champagne-bright);
+}
+
+.saved-wishes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.saved-wish-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 14px;
+  background: rgba(255, 245, 250, 0.06);
+  border: 1px solid rgba(255, 212, 230, 0.18);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.saved-wish-item:hover {
+  background: rgba(255, 195, 224, 0.12);
+  border-color: rgba(246, 213, 142, 0.45);
+}
+
+.saved-wish-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.saved-wish-meta {
+  font-size: 0.73rem;
+  color: var(--champagne-gold);
+  margin-bottom: 0.18rem;
+}
+
+.saved-wish-text {
+  font-size: 0.9rem;
+  color: #fff;
+  word-break: break-word;
+}
+
+.saved-wish-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.btn-wish-mini {
+  appearance: none;
+  border: 1px solid rgba(246, 213, 142, 0.45);
+  background: rgba(246, 213, 142, 0.14);
+  color: var(--champagne-bright);
+  padding: 0.32rem 0.72rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.btn-wish-mini:hover {
+  background: rgba(246, 213, 142, 0.32);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
 .privacy-note {
   margin-top: 0.95rem;
   font-size: 0.76rem;

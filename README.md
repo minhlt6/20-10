@@ -1,6 +1,6 @@
 # 🌸 Website Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 — Hành Trình 6 Chương Kỳ Diệu
 
-Món quà kỹ thuật số tương tác gồm **6 chương điện ảnh** dành tặng các bạn nữ trong lớp đại học nhân ngày Phụ nữ Việt Nam 20/10.
+Món quà kỹ thuật số tương tác gồm **6 chương điện ảnh** dành tặng bạn nhân ngày Phụ nữ Việt Nam 20/10.
 
 ---
 
@@ -42,26 +42,24 @@ Sau đó truy cập `http://localhost:8080`.
 
 ---
 
-## 💌 Cách cá nhân hóa tên lớp, lời chúc và danh sách các bạn nữ
+## 💌 Cách tùy chỉnh lời chúc và nhạc nền
 
 Mở file `script.js`, ngay ở phần đầu tiên bạn sẽ thấy đối tượng `WOMENS_DAY_CONFIG`:
 
 ```javascript
 const WOMENS_DAY_CONFIG = {
-  className: "Lớp Đại Học Thân Yêu Của Chúng Mình",
-  senderName: "Tập thể các bạn nam trong lớp ❤️",
-  prologueText: "Có một điều đặc biệt mà chúng tớ muốn dành tặng các cậu...",
+  className: "Dành Tặng Bạn",
+  senderName: "Món quà nhỏ dành tặng bạn ❤️",
+  prologueText: "Có một điều đặc biệt muốn dành tặng riêng cho bạn trong ngày hôm nay...",
   // ...
   femaleClassmates: [
-    { name: "Tất cả các bạn nữ", note: "" },
-    { name: "Minh Anh", note: "Lời chúc riêng dành cho Minh Anh..." },
-    // Thêm tên các bạn nữ trong lớp tại đây
+    { name: "Bạn", note: "" }
   ],
   musicUrl: "" // Để trống để dùng nhạc Piano tự động hoặc điền "assets/music.mp3"
 };
 ```
 
-Ngoài ra, ngay trên giao diện website, người dùng có thể nhấn nút **"💌 Gửi: Các bạn nữ"** ở góc trên để chọn tên của mình hoặc tự nhập tên để cá nhân hóa toàn bộ lời chúc và tải về **Tấm Thiệp Kỷ Niệm 20/10 (PNG)** mang tên riêng!
+Ngoài ra, ngay trên giao diện website, người nhận có thể nhấn nút **"💌 Dành tặng: Bạn"** ở góc trên để tự nhập tên của mình, cá nhân hóa lời chúc và tải về **Tấm Thiệp Kỷ Niệm 20/10 (PNG)** mang dấu ấn riêng!
 
 ---
 
@@ -86,7 +84,7 @@ Ngoài ra, ngay trên giao diện website, người dùng có thể nhấn nút 
 3. Đợi khoảng 1–2 phút, GitHub sẽ cấp cho bạn đường link dạng:
    `https://<ten-tai-khoan>.github.io/qua-tang-20-10/`
 
-### Bước 3: Tạo mã QR để tặng các bạn nữ
+### Bước 3: Tạo mã QR để chia sẻ món quà
 1. Sao chép đường link GitHub Pages vừa tạo.
 2. Truy cập công cụ tạo QR miễn phí như [QRCode Monkey](https://www.qrcode-monkey.com/) hoặc dùng tính năng **Chia sẻ → Tạo mã QR (Create QR Code)** có sẵn ngay trên thanh địa chỉ của trình duyệt **Google Chrome / Microsoft Edge**.
-3. Tải ảnh mã QR về, in lên thiệp giấy hoặc gửi vào nhóm lớp để các bạn nữ quét mã bằng điện thoại!
+3. Tải ảnh mã QR về, in lên thiệp giấy hoặc gửi trực tiếp cho bạn bè để quét mã bằng điện thoại!

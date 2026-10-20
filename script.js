@@ -2,95 +2,63 @@
  * ============================================================================
  * HAPPY VIETNAMESE WOMEN'S DAY 20/10 — INTERACTIVE DIGITAL GIFT EXPERIENCE
  * ============================================================================
- * Tệp cấu hình cá nhân hóa nằm ngay đầu file để dễ dàng chỉnh sửa tên lớp,
- * lời chúc, danh sách các bạn nữ, màu sắc chủ đạo và nhạc nền.
+ * Tệp cấu hình cá nhân hóa nằm ngay đầu file để dễ dàng chỉnh sửa lời chúc,
+ * thông điệp, màu sắc chủ đạo và nhạc nền dành tặng bạn.
  */
 
 const WOMENS_DAY_CONFIG = {
-  // 1. Thông tin lớp / tập thể gửi lời chúc
-  className: "Lớp Đại Học Thân Yêu Của Chúng Mình",
-  senderName: "Tập thể các bạn nam trong lớp ❤️",
+  // 1. Thông tin hiển thị chung
+  className: "Dành Tặng Bạn",
+  senderName: "Món quà nhỏ dành tặng bạn ❤️",
 
   // 2. Dòng chữ mở đầu bí ẩn (Chương 1)
-  prologueText: "Có một điều đặc biệt mà chúng tớ muốn dành tặng các cậu...",
+  prologueText: "Có một điều đặc biệt muốn dành tặng riêng cho bạn trong ngày hôm nay...",
 
   // 3. Lời chúc chính (Chương 2)
   mainGreeting: {
     title: "HAPPY WOMEN'S DAY",
     date: "20 / 10",
-    headline: "Gửi đến những cô gái tuyệt vời của lớp chúng mình 🌷",
-    body: "Chúc các cậu luôn xinh đẹp, rạng rỡ, tự tin và hạnh phúc. Mong rằng mỗi ngày trôi qua đều mang đến thật nhiều niềm vui, những điều ngọt ngào và những cơ hội để các cậu tỏa sáng theo cách riêng của mình."
+    headline: "Gửi đến bạn — một cô gái thật tuyệt vời 🌷",
+    body: "Chúc bạn luôn xinh đẹp, rạng rỡ, tự tin và ngập tràn hạnh phúc. Mong rằng mỗi ngày trôi qua đều mang đến thật nhiều niềm vui, những điều ngọt ngào và những cơ hội để bạn tỏa sáng theo cách riêng của mình."
   },
 
   // 4. Thông điệp lời kết (Chương 6)
   finaleMessage: {
-    line1: "Gửi đến những bông hoa xinh đẹp của lớp chúng mình...",
-    line2: "Cảm ơn các cậu vì đã góp phần làm cho những năm tháng đại học trở nên vui vẻ, đáng nhớ và đầy màu sắc.",
-    line3: "Chúc các cậu không chỉ có một ngày 20/10 thật đẹp, mà cả 365 ngày đều được yêu thương, hạnh phúc và tự do theo đuổi những điều mình mong muốn.",
+    line1: "Gửi đến bạn — bông hoa rạng rỡ và dịu dàng...",
+    line2: "Cảm ơn bạn vì đã luôn mang đến nguồn năng lượng ấm áp, nụ cười trong trẻo và làm cho thế giới xung quanh trở nên tươi đẹp, nhiều màu sắc hơn.",
+    line3: "Chúc bạn không chỉ có một ngày 20/10 thật đẹp, mà cả 365 ngày đều được yêu thương, hạnh phúc và tự do theo đuổi những điều mình mong muốn.",
     line4: "Happy Vietnamese Women's Day! 💐"
   },
 
   // 5. Danh sách 20 câu chúc khu vườn hoa (Chương 3 — Không lặp lại cho đến khi mở hết)
   flowerWishes: [
-    "Chúc cậu luôn là phiên bản rực rỡ nhất của chính mình!",
-    "Mong mọi ước mơ của cậu đều có cơ hội trở thành hiện thực.",
-    "Chúc cô gái nhỏ luôn được yêu thương và trân trọng.",
-    "Hy vọng nụ cười sẽ luôn hiện diện trên môi cậu.",
-    "Chúc cậu mỗi sáng thức dậy đều thấy lòng bình yên và ngập tràn năng lượng tích cực.",
-    "Cảm ơn cậu vì đã mang đến lớp mình sự dịu dàng, thông minh và những tiếng cười trong trẻo.",
-    "Chúc cậu luôn vững vàng trước mọi thử thách, rực rỡ như đóa hướng dương đón nắng mai.",
-    "Mong rằng những năm tháng đại học của cậu sẽ luôn đong đầy kỷ niệm đẹp và điểm A+ rực rỡ!",
-    "Chúc cậu đi đến đâu cũng gặp được người tử tế, làm việc gì cũng thuận buồm xuôi gió.",
-    "Dù thế giới ngoài kia có bận rộn thế nào, chúc cậu luôn giữ được sự hồn nhiên và ấm áp trong tim.",
-    "Chúc cậu không chỉ tỏa sáng hôm nay mà cả 365 ngày trong năm đều ngập tràn hạnh phúc.",
-    "Mong cậu luôn tự hào về chính mình — một cô gái bản lĩnh, duyên dáng và tuyệt vời.",
-    "Chúc mọi deadline đều nhẹ nhàng qua đi, chỉ còn lại niềm vui và những chuyến đi thanh xuân đáng nhớ.",
-    "Chúc cậu luôn tìm thấy niềm vui trong những điều giản dị nhất mỗi ngày.",
-    "Mong rằng bầu trời của cậu sẽ luôn trong xanh, và mỗi bước chân đều nở hoa thơm ngát.",
-    "Chúc cậu luôn giữ được ngọn lửa đam mê và tự do theo đuổi con đường mình đã chọn.",
-    "Gửi đến cậu ngàn lời chúc ngọt ngào nhất: Luôn xinh đẹp, tự tin và ngập tràn yêu thương!",
-    "Chúc cô gái của lớp mình luôn tỏa ra nguồn năng lượng dịu dàng khiến ai gặp cũng quý mến.",
-    "Mong mọi điều tốt lành, may mắn và bình an sẽ luôn đồng hành cùng cậu trên mọi chặng đường.",
-    "Chúc cậu có một ngày 20/10 thật trọn vẹn bên những người thân yêu và những người bạn tuyệt vời!"
+    "Chúc bạn luôn là phiên bản rực rỡ và hạnh phúc nhất của chính mình!",
+    "Mong mọi ước mơ và dự định của bạn đều sớm trở thành hiện thực.",
+    "Chúc cô gái tuyệt vời như bạn luôn được yêu thương, nâng niu và trân trọng.",
+    "Hy vọng nụ cười tươi tắn sẽ luôn hiện diện trên môi bạn mỗi ngày.",
+    "Chúc bạn mỗi sáng thức dậy đều thấy lòng bình yên và ngập tràn năng lượng tích cực.",
+    "Cảm ơn bạn vì đã luôn mang đến sự dịu dàng, ấm áp và những tiếng cười trong trẻo.",
+    "Chúc bạn luôn vững vàng trước mọi thử thách, rực rỡ như đóa hướng dương đón nắng mai.",
+    "Mong rằng hành trình thanh xuân của bạn sẽ luôn đong đầy những kỷ niệm đẹp và rực rỡ!",
+    "Chúc bạn đi đến đâu cũng gặp được người tử tế, làm việc gì cũng thuận buồm xuôi gió.",
+    "Dù thế giới ngoài kia có bận rộn thế nào, chúc bạn luôn giữ được sự hồn nhiên và ấm áp trong tim.",
+    "Chúc bạn không chỉ tỏa sáng hôm nay mà cả 365 ngày trong năm đều ngập tràn hạnh phúc.",
+    "Mong bạn luôn tự hào về chính mình — một cô gái bản lĩnh, duyên dáng và đáng quý.",
+    "Chúc mọi mệt mỏi hay áp lực đều nhẹ nhàng qua đi, chỉ còn lại niềm vui và những chuyến đi đáng nhớ.",
+    "Chúc bạn luôn tìm thấy niềm vui trong những điều giản dị và ngọt ngào nhất mỗi ngày.",
+    "Mong rằng bầu trời của bạn sẽ luôn trong xanh, và mỗi bước chân đều nở hoa thơm ngát.",
+    "Chúc bạn luôn giữ được ngọn lửa đam mê và tự do theo đuổi con đường mình đã chọn.",
+    "Gửi đến bạn ngàn lời chúc ngọt ngào nhất: Luôn xinh đẹp, tự tin và ngập tràn yêu thương!",
+    "Chúc bạn luôn tỏa ra nguồn năng lượng dịu dàng khiến bất kỳ ai gặp gỡ cũng đều quý mến.",
+    "Mong mọi điều tốt lành, may mắn và bình an sẽ luôn đồng hành cùng bạn trên mọi chặng đường.",
+    "Chúc bạn có một ngày 20/10 thật trọn vẹn bên những người thân yêu và những người bạn tuyệt vời!"
   ],
 
-  // 6. Danh sách các bạn nữ trong lớp (Tùy chọn cá nhân hóa)
+  // 6. Người nhận mặc định ("Bạn" — có thể tự nhập tên riêng hoặc truyền qua ?name=...)
   femaleClassmates: [
     {
-      name: "Tất cả các bạn nữ",
+      name: "Bạn",
       note: ""
-    },
-    {
-      name: "Minh Anh",
-      note: "Chúc Minh Anh luôn giữ vững nụ cười tỏa nắng và nguồn năng lượng tích cực truyền cảm hứng cho cả lớp nhé! ✨"
-    },
-    {
-      name: "Khánh Linh",
-      note: "Gửi Khánh Linh — cô gái dịu dàng, tinh tế và luôn hết mình vì tập thể. Chúc cậu một ngày 20/10 thật ngọt ngào! 🌸"
-    },
-    {
-      name: "Phương Thảo",
-      note: "Chúc Phương Thảo luôn rạng rỡ, tự tin và gặt hái thật nhiều thành công trên giảng đường đại học! 🌷"
-    },
-    {
-      name: "Thu Hà",
-      note: "Chúc Thu Hà luôn vui vẻ, bình an và có thật nhiều kỷ niệm thanh xuân tuyệt đẹp cùng lớp chúng mình! 💖"
-    },
-    {
-      name: "Ngọc Ánh",
-      note: "Như chính cái tên của mình, chúc Ngọc Ánh luôn tỏa sáng lấp lánh và hạnh phúc mỗi ngày nhé! 🌟"
-    },
-    {
-      name: "Bảo Ngọc",
-      note: "Chúc Bảo Ngọc — viên ngọc quý của lớp mình luôn ngập tràn niềm vui, may mắn và tiếng cười! 💎"
-    },
-    {
-      name: "Thanh Trúc",
-      note: "Chúc Thanh Trúc luôn thanh lịch, bản lĩnh và đạt được mọi ước mơ mà cậu đang ấp ủ! 🎋"
-    },
-    {
-      name: "Quỳnh Hương",
-      note: "Chúc Quỳnh Hương dịu dàng như đóa quỳnh đêm, luôn được yêu thương và trân trọng! 🌺"
     }
   ],
 
@@ -104,7 +72,18 @@ const WOMENS_DAY_CONFIG = {
   },
 
   // 8. Đường dẫn nhạc nền (Nếu để trống "", hệ thống sẽ tự động chơi giai điệu Piano & Celesta bằng Web Audio API)
-  musicUrl: ""
+  musicUrl: "",
+
+  // 9. Cấu hình Lưu & Thu Thập Điều Ước của các bạn nữ (Tùy chọn)
+  // - Mặc định mọi điều ước đều tự động lưu vào trình duyệt (localStorage) kèm tính năng tải ảnh Thẻ Điều Ước.
+  // - Nếu các bạn nam muốn nhận toàn bộ điều ước của các bạn nữ gửi về từ xa (khi chia sẻ qua GitHub Pages):
+  //   + Cách A (Google Sheets): Dán URL Web App của Google Apps Script vào `googleSheetWebAppUrl`
+  //   + Cách B (Discord): Dán URL Webhook của kênh Discord vào `discordWebhookUrl`
+  wishCollectorConfig: {
+    storageKey: "womens_day_20_10_saved_wishes",
+    googleSheetWebAppUrl: "",
+    discordWebhookUrl: ""
+  }
 };
 
 /* ============================================================================
@@ -189,7 +168,7 @@ const MYSTERY_GIFTS_DATA = [
     boxGradient: "linear-gradient(135deg, #ff94bd, #d93b75)",
     ribbonGradient: "linear-gradient(180deg, #fff6d1, #e8b856)",
     giftTitle: "Một Bó Hoa Vĩnh Cửu Rực Rỡ",
-    message: "Dành tặng cậu bó hoa kết từ những đóa hồng phấn, tulip lavender và ánh nắng ban mai. Bó hoa này sẽ không bao giờ tàn, giống như nét thanh xuân tươi đẹp và sự rạng rỡ của cậu trong ký ức lớp chúng mình!",
+    message: "Dành tặng bạn bó hoa kết từ những đóa hồng phấn, tulip lavender và ánh nắng ban mai. Bó hoa này sẽ không bao giờ tàn, giống như nét thanh xuân tươi đẹp và sự rạng rỡ của bạn vậy!",
     svgType: "bouquet"
   },
   {
@@ -200,7 +179,7 @@ const MYSTERY_GIFTS_DATA = [
     boxGradient: "linear-gradient(135deg, #c78bf5, #7e3eb8)",
     ribbonGradient: "linear-gradient(180deg, #ffe3f0, #ff99c2)",
     giftTitle: "Tấm Thiệp Viết Tay Đặc Biệt",
-    message: "“Cảm ơn cậu vì đã luôn là mảnh ghép dịu dàng và tuyệt vời của lớp mình. Có những ngày học hành vất vả, chỉ cần nhìn thấy nụ cười của các bạn nữ trong lớp là mọi mệt mỏi đều tan biến. Chúc cậu luôn hạnh phúc nhé!”",
+    message: "“Cảm ơn bạn vì đã luôn là một cô gái dịu dàng, ấm áp và tuyệt vời. Chỉ cần nhìn thấy nụ cười rạng rỡ của bạn là mọi mệt mỏi dường như đều tan biến. Chúc bạn luôn bình yên và hạnh phúc nhé!”",
     svgType: "letter"
   },
   {
@@ -211,7 +190,7 @@ const MYSTERY_GIFTS_DATA = [
     boxGradient: "linear-gradient(135deg, #f6cc76, #c4872b)",
     ribbonGradient: "linear-gradient(180deg, #fffafc, #ffb8d2)",
     giftTitle: "Danh Hiệu: “Cô Gái Tỏa Sáng Nhất Hôm Nay”",
-    message: "Trao tặng cậu chiếc vương miện ánh sao ngày 20/10! Không cần so sánh với bất kỳ ai, cậu chính là nữ hoàng trong câu chuyện của riêng mình — thông minh, duyên dáng, độc nhất và vô cùng đáng quý.",
+    message: "Trao tặng bạn chiếc vương miện ánh sao ngày 20/10! Không cần so sánh với bất kỳ ai, bạn chính là nữ hoàng trong câu chuyện của riêng mình — thông minh, duyên dáng, độc nhất và vô cùng đáng quý.",
     svgType: "crown"
   },
   {
@@ -222,7 +201,7 @@ const MYSTERY_GIFTS_DATA = [
     boxGradient: "linear-gradient(135deg, #74d9a8, #2b8f64)",
     ribbonGradient: "linear-gradient(180deg, #fff5cc, #f0c265)",
     giftTitle: "Cỏ Bốn Lá Pha Lê May Mắn",
-    message: "Cánh thứ nhất cho sức khỏe dồi dào, cánh thứ hai cho điểm số và sự nghiệp thăng hoa, cánh thứ ba cho tình bạn & tình yêu ngọt ngào, và cánh thứ tư cho bình an luôn ở bên cậu suốt 365 ngày!",
+    message: "Cánh thứ nhất cho sức khỏe dồi dào, cánh thứ hai cho học tập và công việc thăng hoa, cánh thứ ba cho tình bạn & tình yêu ngọt ngào, và cánh thứ tư cho bình an luôn ở bên bạn suốt 365 ngày!",
     svgType: "clover"
   },
   {
@@ -232,8 +211,8 @@ const MYSTERY_GIFTS_DATA = [
     subtitle: "Một bầu trời đầy sao",
     boxGradient: "linear-gradient(135deg, #758bf7, #353f9e)",
     ribbonGradient: "linear-gradient(180deg, #fff4d4, #e5b655)",
-    giftTitle: "Bầu Trời Đầy Sao Dành Riêng Cho Cậu",
-    message: "Chúng tớ gói cả một dải ngân hà nhỏ vào chiếc hộp này. Khi nào cảm thấy áp lực hay mỏi mệt, hãy nhớ rằng cậu luôn là một vì sao lấp lánh và luôn có cả tập thể lớp mình ủng hộ phía sau!",
+    giftTitle: "Bầu Trời Đầy Sao Dành Riêng Cho Bạn",
+    message: "Gói cả một dải ngân hà nhỏ vào chiếc hộp này dành tặng bạn. Khi nào cảm thấy áp lực hay mỏi mệt, hãy nhớ rằng bạn luôn là một vì sao lấp lánh và xứng đáng với những điều tốt đẹp nhất!",
     svgType: "galaxy"
   },
   {
@@ -244,7 +223,7 @@ const MYSTERY_GIFTS_DATA = [
     boxGradient: "linear-gradient(135deg, #ff789e, #b81d53)",
     ribbonGradient: "linear-gradient(180deg, #fff5d6, #f2c464)",
     giftTitle: "Trái Tim Pha Lê & Thông Điệp Bí Mật",
-    message: "Bí mật nhỏ từ các bạn nam trong lớp: “Thật may mắn vì thanh xuân đại học của chúng tớ có sự hiện diện của các cậu. Chúc những cô gái của lớp mình mãi mãi xinh đẹp, tự do và được yêu thương trọn vẹn!”",
+    message: "Thông điệp nhỏ dành tặng bạn: “Thật vui vì được quen biết một người bạn tuyệt vời như bạn. Chúc bạn mãi mãi xinh đẹp, tự do, kiêu hãnh và được yêu thương trọn vẹn!”",
     svgType: "heart"
   }
 ];
@@ -435,11 +414,65 @@ class MagicalAudioEngine {
     });
   }
 
-  // Hiệu ứng pháo hoa nhẹ
+  // Hiệu ứng âm thanh pháo hoa bay lên & bung nở lung linh
+  playFireworkLaunchSound() {
+    this.ensureContext();
+    if (!this.ctx) return;
+    const now = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(280, now);
+    osc.frequency.exponentialRampToValueAtTime(920, now + 0.42);
+
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.linearRampToValueAtTime(0.028, now + 0.06);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.45);
+
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.48);
+  }
+
   playFireworkSparkle() {
     this.ensureContext();
-    if (!this.ctx || this.isMuted) return;
-    this.playWarmPianoTone(880 + Math.random() * 520, 0.7, 0.035);
+    if (!this.ctx) return;
+    const now = this.ctx.currentTime;
+
+    // Âm trầm ấm mô phỏng tiếng pháo hoa nở trên bầu trời đêm
+    const boomOsc = this.ctx.createOscillator();
+    const boomGain = this.ctx.createGain();
+    boomOsc.type = "triangle";
+    boomOsc.frequency.setValueAtTime(145, now);
+    boomOsc.frequency.exponentialRampToValueAtTime(38, now + 0.45);
+    boomGain.gain.setValueAtTime(0.06, now);
+    boomGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.48);
+    boomOsc.connect(boomGain);
+    boomGain.connect(this.ctx.destination);
+    boomOsc.start(now);
+    boomOsc.stop(now + 0.5);
+
+    // Chuỗi chuông pha lê lấp lánh khi các tia pháo hoa bung ra
+    const sparkleNotes = [1046.5, 1318.51, 1567.98, 2093.0];
+    sparkleNotes.forEach((freq, idx) => {
+      setTimeout(() => {
+        if (!this.ctx) return;
+        const t = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const g = this.ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq + (Math.random() - 0.5) * 40, t);
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.linearRampToValueAtTime(0.025, t + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + 0.65);
+        osc.connect(g);
+        g.connect(this.ctx.destination);
+        osc.start(t);
+        osc.stop(t + 0.7);
+      }, idx * 55);
+    });
   }
 }
 
@@ -462,9 +495,14 @@ class AmbientCanvasSystem {
     this.stars = [];
     this.convergeParticles = [];
     this.petals = [];
+    this.showerPetals = [];
     this.cursorTrail = [];
-    this.fireworks = [];
+    this.rockets = [];
     this.sparks = [];
+    this.shockwaves = [];
+    this.skyFlashes = [];
+    this.windTime = 0;
+    this.windBoost = 0;
 
     this.resize();
     this.initStars();
@@ -520,28 +558,75 @@ class AmbientCanvasSystem {
   }
 
   initPetals() {
-    const count = this.isLowPower ? 16 : 32;
+    const count = this.isLowPower ? 18 : 34;
     this.petals = [];
     for (let i = 0; i < count; i++) {
-      this.petals.push(this.createPetal(true));
+      this.petals.push(this.createPetal(true, false));
     }
   }
 
-  createPetal(randomY = false) {
-    const rising = this.activeChapter === 6;
-    const colors = ["#ffb3cf", "#ff85b2", "#e2b8ff", "#ffd9e8", "#fce1a8"];
+  createPetal(randomY = false, isShower = false) {
+    const rising = this.activeChapter === 6 && !isShower;
+    const palettes = [
+      { main: "#ff85b2", inner: "#ffd6e6" },
+      { main: "#ffb3cf", inner: "#fff0f6" },
+      { main: "#e04880", inner: "#ff9ec4" },
+      { main: "#d9a7ff", inner: "#f5e6ff" },
+      { main: "#f6d58e", inner: "#fff8dc" }
+    ];
+    const pal = palettes[Math.floor(Math.random() * palettes.length)];
     return {
-      x: Math.random() * this.width,
-      y: randomY ? Math.random() * this.height : (rising ? this.height + 20 : -20),
-      size: 6 + Math.random() * 8,
-      speedY: rising ? -(0.6 + Math.random() * 1.2) : (0.65 + Math.random() * 1.25),
-      speedX: (Math.random() - 0.5) * 0.8,
+      x: Math.random() * (this.width + 200) - 100,
+      y: randomY
+        ? Math.random() * this.height
+        : rising
+          ? this.height + 20 + Math.random() * 80
+          : -25 - Math.random() * (isShower ? 260 : 60),
+      size: (isShower ? 9 : 7) + Math.random() * (isShower ? 10 : 7),
+      speedY: rising
+        ? -(0.7 + Math.random() * 1.35)
+        : (isShower ? 1.8 + Math.random() * 2.6 : 0.75 + Math.random() * 1.25),
+      speedX: (isShower ? 0.9 + Math.random() * 1.8 : (Math.random() - 0.5) * 0.8),
       rotation: Math.random() * Math.PI * 2,
-      rotSpeed: (Math.random() - 0.5) * 0.025,
+      rotSpeed: (Math.random() - 0.5) * 0.035,
+      flipPhase: Math.random() * Math.PI * 2,
+      flipSpeed: 0.025 + Math.random() * 0.04,
       swayPhase: Math.random() * Math.PI * 2,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      alpha: 0.55 + Math.random() * 0.35
+      color: pal.main,
+      innerColor: pal.inner,
+      alpha: isShower ? 0.82 + Math.random() * 0.18 : 0.58 + Math.random() * 0.32,
+      isShower
     };
+  }
+
+  // Vẽ cánh hoa 3D có khía trái tim mềm mại và hiệu ứng lật cánh trong không gian
+  drawRealisticPetal(pt) {
+    const flipScale = 0.38 + 0.62 * Math.abs(Math.cos(pt.flipPhase));
+    const s = pt.size;
+
+    this.ctx.save();
+    this.ctx.translate(pt.x, pt.y);
+    this.ctx.rotate(pt.rotation);
+    this.ctx.scale(1, flipScale);
+    this.ctx.globalAlpha = pt.alpha;
+
+    const grad = this.ctx.createLinearGradient(0, -s, 0, s);
+    grad.addColorStop(0, pt.innerColor);
+    grad.addColorStop(1, pt.color);
+    this.ctx.fillStyle = grad;
+    this.ctx.shadowColor = pt.color;
+    this.ctx.shadowBlur = pt.isShower ? 8 : 4;
+
+    // Hình dáng cánh hoa đào / hoa hồng có khía mềm ở đỉnh
+    this.ctx.beginPath();
+    this.ctx.moveTo(0, s);
+    this.ctx.bezierCurveTo(-s * 1.15, s * 0.35, -s * 1.05, -s * 0.85, -s * 0.22, -s * 0.95);
+    this.ctx.lineTo(0, -s * 0.68);
+    this.ctx.lineTo(s * 0.22, -s * 0.95);
+    this.ctx.bezierCurveTo(s * 1.05, -s * 0.85, s * 1.15, s * 0.35, 0, s);
+    this.ctx.closePath();
+    this.ctx.fill();
+    this.ctx.restore();
   }
 
   bindEvents() {
@@ -577,45 +662,170 @@ class AmbientCanvasSystem {
   }
 
   // Hiệu ứng nổ kim tuyến / hạt sáng tại tọa độ bất kỳ
-  burstSparkles(x, y, count = 65) {
+  burstSparkles(x, y, count = 65, style = "peony") {
     if (this.reducedMotion) return;
-    const actualCount = this.isLowPower ? Math.floor(count * 0.6) : count;
-    const palette = ["#fff6d6", "#f6d58e", "#ff8fb6", "#ffb8d2", "#dfc2ff", "#ffffff"];
+    const actualCount = this.isLowPower ? Math.floor(count * 0.65) : count;
+    const palette = ["#fff6d6", "#f6d58e", "#ff8fb6", "#ff5c93", "#dfc2ff", "#ffffff", "#ffd1e1"];
+    const mainColor = palette[Math.floor(Math.random() * (palette.length - 1))];
+    const subColor = "#fff6d6";
 
+    // Vòng sóng xung kích ánh sáng (Shockwave Halo)
+    this.shockwaves.push({
+      x,
+      y,
+      radius: 4,
+      maxRadius: 95 + Math.random() * 55,
+      alpha: 0.75,
+      color: mainColor
+    });
+
+    // Ánh sáng bừng sáng bầu trời (Sky Illumination Flash)
+    this.skyFlashes.push({
+      x,
+      y,
+      radius: Math.max(this.width, this.height) * 0.42,
+      alpha: 0.22,
+      color: mainColor
+    });
+
+    if (style === "heart") {
+      // Pháo hoa hình Trái Tim lãng mạn
+      const heartPoints = this.isLowPower ? 38 : 56;
+      for (let i = 0; i < heartPoints; i++) {
+        const t = (i / heartPoints) * Math.PI * 2;
+        const hx = 16 * Math.pow(Math.sin(t), 3);
+        const hy = -(13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
+        const scale = 0.28 + Math.random() * 0.04;
+        this.sparks.push({
+          x,
+          y,
+          vx: hx * scale,
+          vy: hy * scale,
+          gravity: 0.045,
+          drag: 0.972,
+          size: 2.6 + Math.random() * 1.8,
+          life: 1,
+          decay: 0.011 + Math.random() * 0.006,
+          color: i % 3 === 0 ? "#fff6d6" : "#ff6b9d",
+          isConfetti: false,
+          strobe: true,
+          trail: []
+        });
+      }
+      return;
+    }
+
+    // Pháo hoa Cẩm Tú Cầu 2 tầng & Vương Miện Ánh Sao
     for (let i = 0; i < actualCount; i++) {
-      const angle = Math.random() * Math.PI * 2;
-      const speed = 1.5 + Math.random() * 7.5;
+      const isInnerRing = i < actualCount * 0.35;
+      const angle = (i / actualCount) * Math.PI * 2 + (Math.random() - 0.5) * 0.25;
+      const speed = isInnerRing
+        ? 1.8 + Math.random() * 2.8
+        : 4.2 + Math.random() * 5.2;
+
       this.sparks.push({
         x,
         y,
         vx: Math.cos(angle) * speed,
-        vy: Math.sin(angle) * speed - 1.2,
-        gravity: 0.08,
-        size: 2 + Math.random() * 3.5,
+        vy: Math.sin(angle) * speed - 0.8,
+        gravity: 0.068,
+        drag: 0.98,
+        size: isInnerRing ? 2 + Math.random() * 2 : 2.5 + Math.random() * 3.2,
         life: 1,
-        decay: 0.012 + Math.random() * 0.016,
-        color: palette[Math.floor(Math.random() * palette.length)],
-        isConfetti: Math.random() > 0.45,
-        rot: Math.random() * Math.PI
+        decay: 0.009 + Math.random() * 0.012,
+        color: isInnerRing ? subColor : palette[Math.floor(Math.random() * palette.length)],
+        isConfetti: Math.random() > 0.62,
+        strobe: Math.random() > 0.4,
+        rot: Math.random() * Math.PI,
+        trail: []
       });
     }
   }
 
-  // Bắn pháo hoa chúc mừng
+  // Phóng tên lửa pháo hoa từ dưới lên và nổ tung trên bầu trời
+  launchFireworkRocket(targetX, targetY, style = "peony") {
+    if (this.reducedMotion) return;
+    const startX = this.width * (0.25 + Math.random() * 0.5);
+    const startY = this.height + 10;
+    const flightFrames = 36 + Math.floor(Math.random() * 14);
+
+    if (this.audio) this.audio.playFireworkLaunchSound();
+
+    this.rockets.push({
+      x: startX,
+      y: startY,
+      vx: (targetX - startX) / flightFrames,
+      vy: (targetY - startY) / flightFrames,
+      targetY,
+      style,
+      color: style === "heart" ? "#ff7aa8" : "#ffe699",
+      trail: []
+    });
+  }
+
+  // Kích hoạt Cơn Mưa Cánh Hoa 3D lộng lẫy
+  triggerPetalShower(petalCount = 85) {
+    if (this.reducedMotion) return;
+    const count = this.isLowPower ? Math.floor(petalCount * 0.55) : petalCount;
+    this.windBoost = 2.4;
+
+    for (let i = 0; i < count; i++) {
+      this.showerPetals.push(this.createPetal(false, true));
+    }
+  }
+
+  // Đại tiệc Pháo Hoa & Mưa Cánh Hoa khi nhấn nút ở Chương 2
+  triggerGrandCelebrationShow() {
+    if (this.reducedMotion) return;
+    this.triggerPetalShower(90);
+
+    const styles = ["heart", "peony", "crown", "heart", "peony", "peony", "heart"];
+    styles.forEach((style, idx) => {
+      setTimeout(() => {
+        const tx = this.width * (0.14 + Math.random() * 0.72);
+        const ty = this.height * (0.14 + Math.random() * 0.32);
+        this.launchFireworkRocket(tx, ty, style);
+      }, idx * 290);
+    });
+  }
+
+  // Bắn pháo hoa chúc mừng tự động khi chuyển chương
   launchFireworkSalvo(salvoCount = 3) {
     if (this.reducedMotion) return;
+    const styles = ["peony", "heart", "peony", "crown"];
     for (let i = 0; i < salvoCount; i++) {
       setTimeout(() => {
-        const x = this.width * (0.2 + Math.random() * 0.6);
-        const y = this.height * (0.18 + Math.random() * 0.34);
-        this.burstSparkles(x, y, 55);
-        if (this.audio) this.audio.playFireworkSparkle();
+        const tx = this.width * (0.18 + Math.random() * 0.64);
+        const ty = this.height * (0.16 + Math.random() * 0.3);
+        this.launchFireworkRocket(tx, ty, styles[i % styles.length]);
       }, i * 340);
     }
   }
 
   render() {
     this.ctx.clearRect(0, 0, this.width, this.height);
+    this.windTime += 0.025;
+    if (this.windBoost > 0) {
+      this.windBoost = Math.max(0, this.windBoost - 0.008);
+    }
+
+    // 0. Hiệu ứng bừng sáng bầu trời khi pháo hoa nổ (Sky Flash)
+    for (let i = this.skyFlashes.length - 1; i >= 0; i--) {
+      const fl = this.skyFlashes[i];
+      fl.alpha -= 0.012;
+      if (fl.alpha <= 0) {
+        this.skyFlashes.splice(i, 1);
+        continue;
+      }
+      this.ctx.save();
+      const grad = this.ctx.createRadialGradient(fl.x, fl.y, 10, fl.x, fl.y, fl.radius);
+      grad.addColorStop(0, fl.color);
+      grad.addColorStop(1, "transparent");
+      this.ctx.globalAlpha = fl.alpha;
+      this.ctx.fillStyle = grad;
+      this.ctx.fillRect(0, 0, this.width, this.height);
+      this.ctx.restore();
+    }
 
     // 1. Vẽ những ngôi sao lấp lánh trên nền
     for (const s of this.stars) {
@@ -659,43 +869,120 @@ class AmbientCanvasSystem {
       }
     }
 
-    // 3. Cánh hoa rơi (Chương 2, 3, 5) hoặc Cánh hoa bay từ dưới lên (Chương 6)
+    // 3. Cánh hoa rơi tự nhiên (Chương 2, 3, 5) hoặc Cánh hoa bay từ dưới lên (Chương 6)
     if (this.activeChapter !== 1 && this.activeChapter !== 4 && !this.reducedMotion) {
       const isRising = this.activeChapter === 6;
+      const windOffset = Math.sin(this.windTime) * 0.55 + this.windBoost;
+
       for (let i = 0; i < this.petals.length; i++) {
         const pt = this.petals[i];
-        pt.swayPhase += 0.02;
-        pt.x += pt.speedX + Math.sin(pt.swayPhase) * 0.45;
+        pt.swayPhase += 0.022;
+        pt.flipPhase += pt.flipSpeed;
+        pt.x += pt.speedX + Math.sin(pt.swayPhase) * 0.5 + windOffset * 0.4;
         pt.y += isRising ? -Math.abs(pt.speedY) : Math.abs(pt.speedY);
         pt.rotation += pt.rotSpeed;
 
-        if (!isRising && pt.y > this.height + 25) {
-          this.petals[i] = this.createPetal(false);
-        } else if (isRising && pt.y < -25) {
-          this.petals[i] = this.createPetal(false);
+        if (!isRising && pt.y > this.height + 28) {
+          this.petals[i] = this.createPetal(false, false);
+        } else if (isRising && pt.y < -28) {
+          this.petals[i] = this.createPetal(false, false);
         }
+        if (pt.x > this.width + 50) pt.x = -40;
+        if (pt.x < -50) pt.x = this.width + 40;
 
-        this.ctx.save();
-        this.ctx.translate(pt.x, pt.y);
-        this.ctx.rotate(pt.rotation);
-        this.ctx.globalAlpha = pt.alpha;
-        this.ctx.fillStyle = pt.color;
-        this.ctx.beginPath();
-        this.ctx.moveTo(0, -pt.size);
-        this.ctx.bezierCurveTo(pt.size, -pt.size * 0.5, pt.size, pt.size * 0.8, 0, pt.size);
-        this.ctx.bezierCurveTo(-pt.size, pt.size * 0.8, -pt.size, -pt.size * 0.5, 0, -pt.size);
-        this.ctx.fill();
-        this.ctx.restore();
+        this.drawRealisticPetal(pt);
       }
     }
 
-    // 4. Pháo hoa ánh sáng & Confetti
+    // 3b. Cơn Mưa Cánh Hoa 3D (Khi nhấn nút Thắp sáng pháo hoa & mưa cánh hoa)
+    for (let i = this.showerPetals.length - 1; i >= 0; i--) {
+      const pt = this.showerPetals[i];
+      pt.swayPhase += 0.035;
+      pt.flipPhase += pt.flipSpeed * 1.3;
+      pt.x += pt.speedX + Math.sin(pt.swayPhase) * 1.35 + this.windBoost * 0.85;
+      pt.y += pt.speedY;
+      pt.rotation += pt.rotSpeed * 1.4;
+
+      if (pt.y > this.height + 40 || pt.x > this.width + 120) {
+        this.showerPetals.splice(i, 1);
+        continue;
+      }
+      this.drawRealisticPetal(pt);
+    }
+
+    // 4a. Tên lửa pháo hoa đang bay lên kèm đuôi sao lấp lánh
+    for (let i = this.rockets.length - 1; i >= 0; i--) {
+      const rk = this.rockets[i];
+      rk.x += rk.vx;
+      rk.y += rk.vy;
+      rk.trail.push({ x: rk.x, y: rk.y });
+      if (rk.trail.length > 14) rk.trail.shift();
+
+      // Đuôi tên lửa pháo hoa
+      for (let j = 0; j < rk.trail.length; j++) {
+        const tpt = rk.trail[j];
+        const ratio = (j + 1) / rk.trail.length;
+        this.ctx.save();
+        this.ctx.globalAlpha = ratio * 0.85;
+        this.ctx.fillStyle = j % 2 === 0 ? "#fff6d6" : rk.color;
+        this.ctx.beginPath();
+        this.ctx.arc(tpt.x, tpt.y, ratio * 3.6, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.restore();
+      }
+
+      // Đầu tên lửa
+      this.ctx.save();
+      this.ctx.fillStyle = "#ffffff";
+      this.ctx.shadowColor = "#ffe699";
+      this.ctx.shadowBlur = 14;
+      this.ctx.beginPath();
+      this.ctx.arc(rk.x, rk.y, 4.2, 0, Math.PI * 2);
+      this.ctx.fill();
+      this.ctx.restore();
+
+      if (rk.y <= rk.targetY) {
+        if (this.audio) this.audio.playFireworkSparkle();
+        this.burstSparkles(rk.x, rk.y, 82, rk.style);
+        this.rockets.splice(i, 1);
+      }
+    }
+
+    // 4b. Vòng sóng xung kích ánh sáng (Shockwave Rings)
+    for (let i = this.shockwaves.length - 1; i >= 0; i--) {
+      const sw = this.shockwaves[i];
+      sw.radius += (sw.maxRadius - sw.radius) * 0.14;
+      sw.alpha -= 0.024;
+      if (sw.alpha <= 0) {
+        this.shockwaves.splice(i, 1);
+        continue;
+      }
+      this.ctx.save();
+      this.ctx.globalAlpha = sw.alpha;
+      this.ctx.strokeStyle = sw.color;
+      this.ctx.lineWidth = 2;
+      this.ctx.shadowColor = sw.color;
+      this.ctx.shadowBlur = 12;
+      this.ctx.beginPath();
+      this.ctx.arc(sw.x, sw.y, sw.radius, 0, Math.PI * 2);
+      this.ctx.stroke();
+      this.ctx.restore();
+    }
+
+    // 4c. Hạt tia pháo hoa bung nở, đuôi liễu rủ (Willow Trails) & Confetti
     for (let i = this.sparks.length - 1; i >= 0; i--) {
       const sp = this.sparks[i];
+      if (sp.trail) {
+        sp.trail.push({ x: sp.x, y: sp.y });
+        if (sp.trail.length > 7) sp.trail.shift();
+      }
+
       sp.x += sp.vx;
       sp.y += sp.vy;
       sp.vy += sp.gravity;
-      sp.vx *= 0.985;
+      const drag = sp.drag || 0.985;
+      sp.vx *= drag;
+      sp.vy *= drag;
       sp.life -= sp.decay;
 
       if (sp.life <= 0) {
@@ -703,16 +990,34 @@ class AmbientCanvasSystem {
         continue;
       }
 
+      // Vẽ vệt đuôi sáng của từng tia pháo hoa
+      if (sp.trail && sp.trail.length > 1 && !sp.isConfetti) {
+        this.ctx.save();
+        this.ctx.beginPath();
+        this.ctx.moveTo(sp.trail[0].x, sp.trail[0].y);
+        for (let k = 1; k < sp.trail.length; k++) {
+          this.ctx.lineTo(sp.trail[k].x, sp.trail[k].y);
+        }
+        this.ctx.strokeStyle = sp.color;
+        this.ctx.globalAlpha = Math.max(0, sp.life * 0.45);
+        this.ctx.lineWidth = sp.size * 0.65;
+        this.ctx.lineCap = "round";
+        this.ctx.stroke();
+        this.ctx.restore();
+      }
+
+      const strobeFactor = sp.strobe && sp.life < 0.55 ? (Math.sin(sp.life * 65) > 0 ? 1 : 0.25) : 1;
+
       this.ctx.save();
-      this.ctx.globalAlpha = Math.max(0, sp.life);
+      this.ctx.globalAlpha = Math.max(0, sp.life * strobeFactor);
       this.ctx.fillStyle = sp.color;
       this.ctx.shadowColor = sp.color;
-      this.ctx.shadowBlur = 8;
+      this.ctx.shadowBlur = 10;
 
       if (sp.isConfetti) {
         this.ctx.translate(sp.x, sp.y);
-        this.ctx.rotate(sp.rot + sp.life * 4);
-        this.ctx.fillRect(-sp.size, -sp.size * 0.5, sp.size * 2, sp.size);
+        this.ctx.rotate((sp.rot || 0) + sp.life * 5);
+        this.ctx.fillRect(-sp.size, -sp.size * 0.5, sp.size * 2.1, sp.size);
       } else {
         this.ctx.beginPath();
         this.ctx.arc(sp.x, sp.y, sp.size, 0, Math.PI * 2);
@@ -785,11 +1090,11 @@ class WishSkySystem {
 
   initDefaultConstellation() {
     const presets = [
-      { rx: 0.16, ry: 0.58, text: "Chúc các bạn nữ lớp mình luôn rạng rỡ và hạnh phúc! 🌷" },
-      { rx: 0.31, ry: 0.34, text: "Mong kỳ này cả lớp đều đạt học bổng và điểm cao! ✨" },
-      { rx: 0.49, ry: 0.46, text: "Tình bạn đại học của chúng mình mãi bền chặt! 💖" },
-      { rx: 0.65, ry: 0.28, text: "Mọi ước mơ tuổi 20 đều sớm thành hiện thực! 🌟" },
-      { rx: 0.81, ry: 0.52, text: "365 ngày ngập tràn tiếng cười và yêu thương! 💐" }
+      { rx: 0.16, ry: 0.58, text: "Chúc bạn luôn rạng rỡ, tự tin và ngập tràn hạnh phúc! 🌷" },
+      { rx: 0.31, ry: 0.34, text: "Mong mọi mục tiêu và dự định của bạn đều thành công rực rỡ! ✨" },
+      { rx: 0.49, ry: 0.46, text: "Chúc bạn luôn giữ mãi nụ cười tỏa nắng trên môi! 💖" },
+      { rx: 0.65, ry: 0.28, text: "Mọi ước mơ ấp ủ của bạn đều sớm trở thành hiện thực! 🌟" },
+      { rx: 0.81, ry: 0.52, text: "365 ngày đều ngập tràn tiếng cười, bình an và yêu thương! 💐" }
     ];
 
     this.stars = presets.map((p) => ({
@@ -854,6 +1159,23 @@ class WishSkySystem {
     });
   }
 
+  // Thêm ngôi sao điều ước đã lưu từ localStorage lên bầu trời
+  addSavedStar(rx, ry, text) {
+    const safeRx = typeof rx === "number" ? rx : 0.15 + Math.random() * 0.7;
+    const safeRy = typeof ry === "number" ? ry : 0.2 + Math.random() * 0.52;
+    this.stars.push({
+      x: safeRx * this.width,
+      y: safeRy * this.height,
+      rx: safeRx,
+      ry: safeRy,
+      text,
+      radius: 5.5,
+      pulse: Math.random() * Math.PI * 2,
+      flare: 0.4
+    });
+    this.updateStarCounter();
+  }
+
   // Biến điều ước thành ngôi sao bay lên theo đường cong Bezier mềm mại
   launchWishStar(wishText, onArrived) {
     if (this.audio) this.audio.playWishStarSound();
@@ -881,7 +1203,11 @@ class WishSkySystem {
       targetRy,
       text: wishText,
       trail: [],
-      onArrived
+      onArrived: () => {
+        if (typeof onArrived === "function") {
+          onArrived({ rx: targetRx, ry: targetRy });
+        }
+      }
     });
   }
 
@@ -1241,14 +1567,19 @@ class WomensDayExperienceApp {
     this.ambientCanvas.launchFireworkSalvo(3);
   }
 
-  // 3. Cá nhân hóa tên các bạn nữ trong lớp
+  // 3. Cá nhân hóa tên người nhận
   renderRecipientSelectors() {
     const chipsContainer = document.getElementById("recipient-chips-container");
     const modalList = document.getElementById("modal-recipient-list");
-    if (!chipsContainer || !modalList) return;
 
     const createButtons = (container, closeModalOnSelect = false) => {
+      if (!container) return;
       container.innerHTML = "";
+      if (this.config.femaleClassmates.length <= 1) {
+        container.hidden = true;
+        return;
+      }
+      container.hidden = false;
       this.config.femaleClassmates.forEach((person) => {
         const btn = document.createElement("button");
         btn.type = "button";
@@ -1276,24 +1607,24 @@ class WomensDayExperienceApp {
     const headline = document.getElementById("ch2-greeting-line-1");
     const personalNote = document.getElementById("ch2-personal-note");
 
-    if (person.name === "Tất cả các bạn nữ") {
-      if (topLabel) topLabel.textContent = "Gửi: Các bạn nữ";
+    if (person.name === "Bạn") {
+      if (topLabel) topLabel.textContent = "Dành tặng: Bạn";
       if (headline) headline.textContent = this.config.mainGreeting.headline;
       if (personalNote) {
         personalNote.hidden = true;
         personalNote.textContent = "";
       }
     } else {
-      if (topLabel) topLabel.textContent = `Gửi: ${person.name} 🌸`;
+      if (topLabel) topLabel.textContent = `Dành tặng: ${person.name} 🌸`;
       if (headline) {
-        headline.textContent = `Gửi đến ${person.name} — cô gái tuyệt vời của lớp chúng mình 🌷`;
+        headline.textContent = `Gửi đến ${person.name} — một cô gái thật tuyệt vời 🌷`;
       }
       if (personalNote) {
         personalNote.hidden = false;
         personalNote.classList.add("line-visible");
         personalNote.textContent =
           person.note ||
-          `Chúc ${person.name} có một ngày 20/10 thật ngọt ngào, luôn giữ vững nụ cười rạng rỡ và thực hiện được mọi điều cậu mong ước nhé! ✨`;
+          `Chúc ${person.name} có một ngày 20/10 thật ngọt ngào, luôn giữ vững nụ cười rạng rỡ và thực hiện được mọi điều bạn mong ước nhé! ✨`;
       }
     }
 
@@ -1565,8 +1896,8 @@ class WomensDayExperienceApp {
         if (quoteEl) quoteEl.textContent = `“${wish}”`;
         if (metaEl) {
           const recipientName =
-            this.selectedRecipient.name === "Tất cả các bạn nữ"
-              ? "cậu"
+            this.selectedRecipient.name === "Bạn"
+              ? "bạn"
               : this.selectedRecipient.name;
           metaEl.textContent = `Dành tặng ${recipientName} • Còn ${this.wishPool.length} lời chúc mới trong lượt này`;
         }
@@ -1600,12 +1931,219 @@ class WomensDayExperienceApp {
     }
   }
 
-  // 6. Chương 4: Gửi Điều Ước Lên Bầu Trời Đêm
+  // 6. Chương 4: Gửi Điều Ước Lên Bầu Trời Đêm & Lưu Trữ Điều Ước
+  getWishStorageKey() {
+    return (this.config.wishCollectorConfig && this.config.wishCollectorConfig.storageKey) || "womens_day_20_10_saved_wishes";
+  }
+
+  getSavedWishesFromStorage() {
+    try {
+      const raw = localStorage.getItem(this.getWishStorageKey());
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (err) {
+      return [];
+    }
+  }
+
+  saveWishesToStorage(list) {
+    try {
+      localStorage.setItem(this.getWishStorageKey(), JSON.stringify(list));
+    } catch (err) {
+      // Bỏ qua nếu trình duyệt chặn localStorage ở chế độ ẩn danh nghiêm ngặt
+    }
+  }
+
+  // Đồng bộ ngầm điều ước về Google Sheets hoặc Discord Webhook (nếu được cấu hình)
+  syncWishToCloud(wishItem) {
+    const collector = this.config.wishCollectorConfig;
+    if (!collector) return;
+
+    // 1. Gửi về Google Sheets (thông qua Google Apps Script Web App)
+    if (collector.googleSheetWebAppUrl && collector.googleSheetWebAppUrl.trim() !== "") {
+      fetch(collector.googleSheetWebAppUrl.trim(), {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          className: this.config.className,
+          recipient: wishItem.author,
+          wish: wishItem.text,
+          createdAt: wishItem.time
+        })
+      }).catch(() => {});
+    }
+
+    // 2. Gửi về kênh Discord của các bạn nam (thông qua Discord Webhook URL)
+    if (collector.discordWebhookUrl && collector.discordWebhookUrl.trim() !== "") {
+      fetch(collector.discordWebhookUrl.trim(), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: "🌟 Bầu Trời Điều Ước 20/10",
+          embeds: [
+            {
+              title: `💌 Điều ước mới từ: ${wishItem.author}`,
+              description: `“${wishItem.text}”`,
+              color: 16747190,
+              footer: { text: `${this.config.className} • ${wishItem.time}` }
+            }
+          ]
+        })
+      }).catch(() => {});
+    }
+  }
+
+  renderSavedWishesList() {
+    const panel = document.getElementById("saved-wishes-panel");
+    const listEl = document.getElementById("saved-wishes-list");
+    const countEl = document.getElementById("saved-wishes-count");
+    if (!panel || !listEl) return;
+
+    const saved = this.getSavedWishesFromStorage();
+    if (countEl) countEl.textContent = String(saved.length);
+
+    if (saved.length === 0) {
+      panel.hidden = true;
+      listEl.innerHTML = "";
+      return;
+    }
+
+    panel.hidden = false;
+    listEl.innerHTML = "";
+
+    saved
+      .slice()
+      .reverse()
+      .forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "saved-wish-item";
+
+        const contentDiv = document.createElement("div");
+        contentDiv.className = "saved-wish-content";
+
+        const metaDiv = document.createElement("div");
+        metaDiv.className = "saved-wish-meta";
+        metaDiv.textContent = `🌟 ${item.author} • ${item.time}`;
+
+        const textDiv = document.createElement("div");
+        textDiv.className = "saved-wish-text";
+        textDiv.textContent = `“${item.text}”`;
+
+        contentDiv.appendChild(metaDiv);
+        contentDiv.appendChild(textDiv);
+
+        const actionsDiv = document.createElement("div");
+        actionsDiv.className = "saved-wish-item-actions";
+
+        const downloadCardBtn = document.createElement("button");
+        downloadCardBtn.type = "button";
+        downloadCardBtn.className = "btn-wish-mini";
+        downloadCardBtn.textContent = "📸 Lưu ảnh thẻ";
+        downloadCardBtn.addEventListener("click", () => {
+          this.downloadSingleWishCard(item);
+        });
+
+        actionsDiv.appendChild(downloadCardBtn);
+        li.appendChild(contentDiv);
+        li.appendChild(actionsDiv);
+        listEl.appendChild(li);
+      });
+  }
+
+  // Tạo ảnh Thẻ Ngôi Sao Điều Ước (PNG) cho từng điều ước
+  downloadSingleWishCard(wishItem) {
+    const canvas = document.createElement("canvas");
+    canvas.width = 1080;
+    canvas.height = 1080;
+    const ctx = canvas.getContext("2d");
+
+    const grad = ctx.createRadialGradient(540, 320, 40, 540, 540, 760);
+    grad.addColorStop(0, "#2c1654");
+    grad.addColorStop(0.55, "#15092e");
+    grad.addColorStop(1, "#080314");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 1080, 1080);
+
+    // Vẽ bầu trời sao lấp lánh
+    for (let i = 0; i < 85; i++) {
+      ctx.fillStyle = i % 3 === 0 ? "rgba(246, 213, 142, 0.8)" : "rgba(255, 210, 232, 0.65)";
+      ctx.beginPath();
+      ctx.arc(60 + Math.random() * 960, 60 + Math.random() * 960, 1.2 + Math.random() * 2.8, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.strokeStyle = "rgba(246, 213, 142, 0.72)";
+    ctx.lineWidth = 3.5;
+    ctx.strokeRect(48, 48, 984, 984);
+
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#f6d58e";
+    ctx.font = "600 26px 'Be Vietnam Pro', sans-serif";
+    ctx.fillText("NGÔI SAO ĐIỀU ƯỚC 20 / 10 • BẦU TRỜI KỲ DIỆU", 540, 150);
+
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "700 68px 'Cormorant Garamond', Georgia, serif";
+    ctx.fillText(`Điều Ước Của ${wishItem.author}`, 540, 255);
+
+    // Ngôi sao phát quang ở tâm
+    const starGlow = ctx.createRadialGradient(540, 375, 4, 540, 375, 75);
+    starGlow.addColorStop(0, "#ffffff");
+    starGlow.addColorStop(0.4, "#ffe699");
+    starGlow.addColorStop(1, "transparent");
+    ctx.fillStyle = starGlow;
+    ctx.beginPath();
+    ctx.arc(540, 375, 75, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Chia dòng nội dung điều ước
+    ctx.fillStyle = "#fffafc";
+    ctx.font = "italic 600 44px 'Cormorant Garamond', Georgia, serif";
+    const words = (`“${wishItem.text}”`).split(" ");
+    const lines = [];
+    let currentLine = "";
+    words.forEach((w) => {
+      const test = currentLine ? `${currentLine} ${w}` : w;
+      if (ctx.measureText(test).width > 820) {
+        lines.push(currentLine);
+        currentLine = w;
+      } else {
+        currentLine = test;
+      }
+    });
+    if (currentLine) lines.push(currentLine);
+
+    lines.forEach((line, idx) => {
+      ctx.fillText(line, 540, 535 + idx * 62);
+    });
+
+    ctx.fillStyle = "#ffb8d2";
+    ctx.font = "500 26px 'Be Vietnam Pro', sans-serif";
+    ctx.fillText("Mong rằng điều ước của bạn sẽ sớm thành hiện thực ✨", 540, 865);
+
+    ctx.fillStyle = "rgba(246, 213, 142, 0.88)";
+    ctx.font = "500 24px 'Be Vietnam Pro', sans-serif";
+    ctx.fillText(`${this.config.className} • ${wishItem.time}`, 540, 945);
+
+    const link = document.createElement("a");
+    link.download = `Dieu-Uoc-20-10-${Date.now()}.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  }
+
   bindChapter4WishEvents() {
     const form = document.getElementById("wish-form");
     const input = document.getElementById("wish-input");
     const confirmBox = document.getElementById("wish-confirmation");
     const chips = document.querySelectorAll(".wish-chip");
+    const exportBtn = document.getElementById("btn-export-wishes");
+
+    // Khôi phục các ngôi sao điều ước đã lưu từ localStorage lên bầu trời
+    const existingWishes = this.getSavedWishesFromStorage();
+    existingWishes.forEach((w) => {
+      this.wishSky.addSavedStar(w.rx, w.ry, `${w.author}: ${w.text}`);
+    });
+    this.renderSavedWishesList();
 
     chips.forEach((chip) => {
       chip.addEventListener("click", () => {
@@ -1616,13 +2154,43 @@ class WomensDayExperienceApp {
       });
     });
 
+    if (exportBtn) {
+      exportBtn.addEventListener("click", () => {
+        const saved = this.getSavedWishesFromStorage();
+        if (saved.length === 0) return;
+        const header = `=== SỔ TAY ĐIỀU ƯỚC 20/10 - ${this.config.className.toUpperCase()} ===\n\n`;
+        const content = saved
+          .map((item, idx) => `${idx + 1}. [${item.time}] ${item.author}:\n   “${item.text}”`)
+          .join("\n\n");
+        const blob = new Blob([header + content], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "So-Tay-Dieu-Uoc-20-10.txt";
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+
     if (form && input) {
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         const text = input.value.trim() || "Luôn xinh đẹp, hạnh phúc và rạng rỡ mỗi ngày! ✨";
         if (confirmBox) confirmBox.hidden = true;
 
-        this.wishSky.launchWishStar(text, () => {
+        const authorName =
+          this.selectedRecipient.name === "Bạn"
+            ? "Bạn"
+            : this.selectedRecipient.name;
+        const nowStr = new Date().toLocaleString("vi-VN", {
+          hour: "2-digit",
+          minute: "2-digit",
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric"
+        });
+
+        this.wishSky.launchWishStar(`${authorName}: ${text}`, (coords) => {
           if (confirmBox) {
             confirmBox.hidden = false;
           }
@@ -1630,8 +2198,24 @@ class WomensDayExperienceApp {
           this.ambientCanvas.burstSparkles(
             skyRect.left + skyRect.width / 2,
             skyRect.top + skyRect.height * 0.35,
-            40
+            45,
+            "heart"
           );
+
+          // Lưu điều ước vào localStorage và đồng bộ Cloud (nếu có)
+          const wishItem = {
+            id: Date.now(),
+            author: authorName,
+            text,
+            time: nowStr,
+            rx: coords ? coords.rx : 0.5,
+            ry: coords ? coords.ry : 0.35
+          };
+          const list = this.getSavedWishesFromStorage();
+          list.push(wishItem);
+          this.saveWishesToStorage(list);
+          this.renderSavedWishesList();
+          this.syncWishToCloud(wishItem);
         });
 
         input.value = "";
@@ -1782,8 +2366,8 @@ class WomensDayExperienceApp {
     if (title) title.textContent = gift.giftTitle;
 
     const targetName =
-      this.selectedRecipient.name === "Tất cả các bạn nữ"
-        ? "Cô gái tuyệt vời của lớp chúng mình"
+      this.selectedRecipient.name === "Bạn"
+        ? "Bạn — một cô gái thật tuyệt vời"
         : this.selectedRecipient.name;
     if (recipient) recipient.textContent = `Dành tặng: ${targetName} 🌷`;
     if (message) message.textContent = gift.message;
@@ -1855,8 +2439,8 @@ class WomensDayExperienceApp {
     ctx.fillText("Món Quà Thanh Xuân", 540, 275);
 
     const recipientText =
-      this.selectedRecipient.name === "Tất cả các bạn nữ"
-        ? "Gửi đến những bông hoa xinh đẹp của lớp mình"
+      this.selectedRecipient.name === "Bạn"
+        ? "Gửi đến bạn — một cô gái thật tuyệt vời"
         : `Dành tặng riêng: ${this.selectedRecipient.name}`;
 
     ctx.fillStyle = "#fff2cc";
@@ -1867,13 +2451,13 @@ class WomensDayExperienceApp {
     ctx.fillStyle = "#fffafc";
     ctx.font = "400 32px 'Be Vietnam Pro', sans-serif";
     const lines = [
-      "Chúc cậu luôn xinh đẹp, rạng rỡ, tự tin và hạnh phúc.",
+      "Chúc bạn luôn xinh đẹp, rạng rỡ, tự tin và hạnh phúc.",
       "Mong rằng không chỉ ngày 20/10 hôm nay,",
-      "mà cả 365 ngày trong năm cậu đều được yêu thương,",
+      "mà cả 365 ngày trong năm bạn đều được yêu thương,",
       "trân trọng và tự do theo đuổi ước mơ của mình.",
       "",
-      "Cảm ơn cậu vì đã làm cho những năm tháng đại học",
-      "của lớp chúng mình trở nên thật rực rỡ và đáng nhớ!"
+      "Cảm ơn bạn vì đã luôn mang đến nguồn năng lượng",
+      "ấm áp và những nụ cười thật tươi đẹp cho cuộc sống!"
     ];
 
     lines.forEach((line, i) => {
@@ -1914,11 +2498,43 @@ class WomensDayExperienceApp {
       });
     });
 
-    // Nút bắn pháo hoa Chương 2
+    // Nút bắn pháo hoa & mưa cánh hoa Chương 2
     const fwBtn = document.getElementById("btn-trigger-fireworks");
     if (fwBtn) {
       fwBtn.addEventListener("click", () => {
-        this.ambientCanvas.launchFireworkSalvo(4);
+        // Kích hoạt đại tiệc 7 tên lửa pháo hoa (Trái tim + Cẩm tú cầu 2 tầng) & Mưa 90 cánh hoa 3D
+        this.ambientCanvas.triggerGrandCelebrationShow();
+
+        // Bùng nổ hạt kim tuyến ngay tại nút bấm và huy hiệu 20/10
+        const btnRect = fwBtn.getBoundingClientRect();
+        this.ambientCanvas.burstSparkles(
+          btnRect.left + btnRect.width / 2,
+          btnRect.top + btnRect.height / 2,
+          45,
+          "peony"
+        );
+
+        const badgeEl = document.getElementById("hero-date-badge");
+        if (badgeEl) {
+          const bRect = badgeEl.getBoundingClientRect();
+          this.ambientCanvas.burstSparkles(
+            bRect.left + bRect.width / 2,
+            bRect.top + bRect.height / 2,
+            55,
+            "heart"
+          );
+        }
+
+        // Hiệu ứng phản hồi nút bấm & bừng sáng tiêu đề Chương 2
+        fwBtn.classList.remove("is-firing");
+        void fwBtn.offsetWidth;
+        fwBtn.classList.add("is-firing");
+
+        const ch2 = document.getElementById("chapter-2");
+        if (ch2) {
+          ch2.classList.add("celebration-boost");
+          setTimeout(() => ch2.classList.remove("celebration-boost"), 2600);
+        }
       });
     }
 
