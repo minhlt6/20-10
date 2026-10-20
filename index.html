@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="description" content="Món quà kỹ thuật số đặc biệt chúc mừng ngày Phụ nữ Việt Nam 20/10 dành tặng những cô gái tuyệt vời của lớp chúng mình." />
+  <meta name="theme-color" content="#140a24" />
+  <title>Happy Vietnamese Women's Day 20/10 — Món Quà Kỳ Diệu Dành Tặng Các Cậu</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts hỗ trợ đầy đủ tiếng Việt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="in-prologue" data-active-chapter="1">
+  <!-- Nền Canvas đa tầng: Sao trời, hạt sáng, hiệu ứng con trỏ, pháo hoa & cánh hoa -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Màn sương ánh sáng chuyển cảnh điện ảnh (Cinematic Scene Transition) -->
+  <div id="cinematic-veil" class="cinematic-veil" aria-hidden="true">
+    <div class="veil-bloom"></div>
+  </div>
+
+  <!-- Thanh điều hướng nổi & công cụ cá nhân hóa / âm thanh -->
+  <header class="floating-topbar" id="floating-topbar" aria-label="Điều hướng chương và cài đặt">
+    <div class="topbar-brand">
+      <span class="brand-gem" aria-hidden="true">🌸</span>
+      <span class="brand-text" id="nav-class-name">20/10 • Lớp Chúng Mình</span>
+    </div>
+
+    <nav class="chapter-nav" aria-label="Danh sách các chương">
+      <button type="button" class="chapter-dot active" data-target="1" title="Chương 1: Mở đầu bí ẩn">
+        <span class="dot-num">01</span>
+        <span class="dot-label">Mở Đầu</span>
+      </button>
+      <button type="button" class="chapter-dot" data-target="2" title="Chương 2: Khoảnh khắc chúc mừng">
+        <span class="dot-num">02</span>
+        <span class="dot-label">Chúc Mừng</span>
+      </button>
+      <button type="button" class="chapter-dot" data-target="3" title="Chương 3: Khu vườn hoa kỳ diệu">
+        <span class="dot-num">03</span>
+        <span class="dot-label">Vườn Hoa</span>
+      </button>
+      <button type="button" class="chapter-dot" data-target="4" title="Chương 4: Bầu trời điều ước">
+        <span class="dot-num">04</span>
+        <span class="dot-label">Điều Ước</span>
+      </button>
+      <button type="button" class="chapter-dot" data-target="5" title="Chương 5: Món quà bất ngờ">
+        <span class="dot-num">05</span>
+        <span class="dot-label">Hộp Quà</span>
+      </button>
+      <button type="button" class="chapter-dot" data-target="6" title="Chương 6: Lời kết đặc biệt">
+        <span class="dot-num">06</span>
+        <span class="dot-label">Lời Kết</span>
+      </button>
+    </nav>
+
+    <div class="topbar-actions">
+      <button type="button" class="pill-btn" id="btn-personalize-open" title="Chọn tên bạn nữ nhận lời chúc">
+        <span aria-hidden="true">💌</span>
+        <span id="current-recipient-label">Gửi: Các bạn nữ</span>
+      </button>
+
+      <button type="button" class="icon-btn" id="btn-motion-toggle" title="Chuyển đổi chế độ chuyển động (Đầy đủ / Nhẹ nhàng)" aria-pressed="false">
+        <span id="motion-icon" aria-hidden="true">✨</span>
+      </button>
+
+      <button type="button" class="icon-btn music-btn" id="btn-music-toggle" title="Bật / Tắt nhạc nền piano và âm thanh phép thuật" aria-pressed="false">
+        <span class="music-icon" id="music-icon" aria-hidden="true">🔇</span>
+        <span class="music-bars" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       CHƯƠNG 1 — MỞ ĐẦU BÍ ẨN
+       ========================================================================= -->
+  <section id="chapter-1" class="chapter-section chapter-prologue active-chapter" data-chapter="1" aria-label="Chương 1: Mở đầu bí ẩn">
+    <div class="prologue-backdrop">
+      <div class="center-starlight-core" id="prologue-light-core"></div>
+      <div class="aurora-ring ring-1"></div>
+      <div class="aurora-ring ring-2"></div>
+    </div>
+
+    <div class="chapter-container prologue-container">
+      <div class="prologue-badge">
+        <span class="sparkle-dot"></span>
+        <span>CHƯƠNG I • MỞ ĐẦU BÍ ẨN</span>
+        <span class="sparkle-dot"></span>
+      </div>
+
+      <!-- Khung 3D Hộp Quà Bí Mật & Phong Thư Ánh Sáng -->
+      <div class="prologue-stage" id="prologue-stage">
+        <div class="gift-3d-wrapper" id="prologue-gift-wrapper" role="button" tabindex="0" aria-label="Nhấn để mở hộp quà bí mật 20/10">
+          <div class="gift-magical-aura"></div>
+          <div class="gift-light-beam" id="prologue-light-beam"></div>
+
+          <!-- Hộp quà 3D CSS thực thụ -->
+          <div class="gift-box-3d" id="prologue-gift-box">
+            <!-- Nắp hộp 3D -->
+            <div class="gift-lid-3d" id="prologue-gift-lid">
+              <div class="lid-face lid-top">
+                <div class="ribbon-cross-x"></div>
+                <div class="ribbon-cross-y"></div>
+                <div class="bow-3d">
+                  <span class="bow-loop left"></span>
+                  <span class="bow-loop right"></span>
+                  <span class="bow-knot"></span>
+                </div>
+              </div>
+              <div class="lid-face lid-front"></div>
+              <div class="lid-face lid-back"></div>
+              <div class="lid-face lid-left"></div>
+              <div class="lid-face lid-right"></div>
+            </div>
+
+            <!-- Thân hộp 3D -->
+            <div class="gift-body-3d">
+              <div class="box-face box-front"><span class="ribbon-v"></span></div>
+              <div class="box-face box-back"><span class="ribbon-v"></span></div>
+              <div class="box-face box-left"><span class="ribbon-v"></span></div>
+              <div class="box-face box-right"><span class="ribbon-v"></span></div>
+              <div class="box-face box-bottom"></div>
+              <!-- Ánh sáng phát ra từ bên trong thân hộp -->
+              <div class="box-inner-glow">
+                <span class="floating-envelope" aria-hidden="true">💌</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dòng chữ gõ từng ký tự -->
+      <div class="typewriter-box" aria-live="polite">
+        <p class="typewriter-text" id="prologue-typewriter"></p>
+        <span class="typewriter-cursor" id="prologue-cursor" aria-hidden="true">|</span>
+      </div>
+
+      <!-- Nút Mở Món Quà Bí Mật -->
+      <div class="prologue-cta-wrap" id="prologue-cta-wrap">
+        <button type="button" class="btn-magical-primary" id="btn-open-secret-gift">
+          <span class="btn-shimmer" aria-hidden="true"></span>
+          <span class="btn-text">Mở món quà bí mật 🎁</span>
+        </button>
+        <p class="prologue-hint">Chạm vào hộp quà hoặc nút phía trên để đánh thức điều kỳ diệu</p>
+      </div>
+    </div>
+
+    <!-- Nút bỏ qua phần mở đầu theo yêu cầu kỹ thuật -->
+    <button type="button" class="btn-skip-intro" id="btn-skip-intro">
+      <span>Bỏ qua mở đầu</span>
+      <span aria-hidden="true">⏭</span>
+    </button>
+  </section>
+
+  <!-- =========================================================================
+       HÀNH TRÌNH CHÍNH (CHƯƠNG 2 -> CHƯƠNG 6)
+       ========================================================================= -->
+  <main id="main-journey" class="main-journey" aria-live="polite">
+
+    <!-- =======================================================================
+         CHƯƠNG 2 — KHOẢNH KHẮC CHÚC MỪNG
+         ======================================================================= -->
+    <section id="chapter-2" class="chapter-section chapter-celebration" data-chapter="2" aria-label="Chương 2: Khoảnh khắc chúc mừng">
+      <!-- Lớp hoa hồng, tulip và cánh hoa rơi Parallax phía sau -->
+      <div class="parallax-floral-layer" aria-hidden="true">
+        <div class="floating-bloom bloom-rose-1" data-parallax="0.04">🌹</div>
+        <div class="floating-bloom bloom-tulip-1" data-parallax="-0.05">🌷</div>
+        <div class="floating-bloom bloom-rose-2" data-parallax="0.06">🌸</div>
+        <div class="floating-bloom bloom-tulip-2" data-parallax="-0.03">🌷</div>
+        <div class="floating-bloom bloom-sparkle-1" data-parallax="0.05">✨</div>
+        <div class="floating-bloom bloom-rose-3" data-parallax="-0.04">🌺</div>
+      </div>
+
+      <div class="chapter-container">
+        <div class="chapter-eyebrow reveal-on-scroll">
+          <span>CHƯƠNG II • KHOẢNH KHẮC CHÚC MỪNG</span>
+        </div>
+
+        <!-- Tiêu đề lớn 3D Reveal từng chữ bay vào -->
+        <div class="hero-3d-title-wrap" id="celebration-title-wrap">
+          <h1 class="hero-title-en" id="hero-title-en" aria-label="HAPPY WOMEN'S DAY">
+            <!-- JS sẽ tách từng ký tự 3D bay vào -->
+            HAPPY WOMEN'S DAY
+          </h1>
+          <div class="hero-date-badge" id="hero-date-badge" aria-label="20 / 10">
+            <span class="date-char">2</span>
+            <span class="date-char">0</span>
+            <span class="date-slash">/</span>
+            <span class="date-char">1</span>
+            <span class="date-char">0</span>
+          </div>
+        </div>
+
+        <!-- Thanh chọn tên bạn nữ cá nhân hóa nhanh -->
+        <div class="recipient-quick-bar reveal-on-scroll">
+          <span class="quick-bar-label">✨ Lời chúc dành riêng cho:</span>
+          <div class="recipient-chips" id="recipient-chips-container">
+            <!-- JS render danh sách các bạn nữ từ CONFIG -->
+          </div>
+        </div>
+
+        <!-- Thiệp lời chúc chính xuất hiện tuần tự từng dòng -->
+        <article class="glass-card celebration-letter-card reveal-on-scroll" id="celebration-letter-card">
+          <div class="card-corner-ornament top-left" aria-hidden="true"></div>
+          <div class="card-corner-ornament top-right" aria-hidden="true"></div>
+          <div class="card-corner-ornament bottom-left" aria-hidden="true"></div>
+          <div class="card-corner-ornament bottom-right" aria-hidden="true"></div>
+
+          <h2 class="greeting-line greeting-headline" id="ch2-greeting-line-1">
+            Gửi đến những cô gái tuyệt vời của lớp chúng mình 🌷
+          </h2>
+
+          <p class="greeting-line greeting-body" id="ch2-greeting-line-2">
+            Chúc các cậu luôn xinh đẹp, rạng rỡ, tự tin và hạnh phúc. Mong rằng mỗi ngày trôi qua đều mang đến thật nhiều niềm vui, những điều ngọt ngào và những cơ hội để các cậu tỏa sáng theo cách riêng của mình.
+          </p>
+
+          <p class="greeting-line greeting-personal-note" id="ch2-personal-note" hidden></p>
+
+          <div class="greeting-line greeting-signature" id="ch2-greeting-signature">
+            <span class="sig-from">Thương gửi từ:</span>
+            <strong id="ch2-sender-name">Tập thể các bạn nam trong lớp ❤️</strong>
+          </div>
+        </article>
+
+        <!-- Cụm nút tương tác Chương 2 -->
+        <div class="chapter-actions reveal-on-scroll">
+          <button type="button" class="btn-glass-gold" id="btn-trigger-fireworks">
+            <span>Thắp sáng pháo hoa &amp; mưa cánh hoa 🎆</span>
+          </button>
+          <button type="button" class="btn-magical-next" data-goto="3">
+            <span>Bước vào Khu Vườn Hoa Kỳ Diệu 🌸</span>
+            <span class="arrow-down" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CHƯƠNG 3 — KHU VƯỜN HOA KỲ DIỆU
+         ======================================================================= -->
+    <section id="chapter-3" class="chapter-section chapter-garden" data-chapter="3" aria-label="Chương 3: Khu vườn hoa kỳ diệu">
+      <div class="chapter-container">
+        <div class="chapter-eyebrow reveal-on-scroll">
+          <span>CHƯƠNG III • KHU VƯỜN HOA KỲ DIỆU</span>
+        </div>
+
+        <h2 class="section-title reveal-on-scroll">Khu Vườn Của Những Lời Chúc Nở Rộ</h2>
+        <p class="section-subtitle reveal-on-scroll">
+          Mỗi bông hoa trong khu vườn này ẩn giấu một thông điệp dịu dàng. Hãy chạm vào từng bông hoa để đánh thức sắc hương và đón nhận lời chúc dành riêng cho cậu nhé!
+        </p>
+
+        <!-- Thanh trạng thái khu vườn & nút nở rộ toàn bộ -->
+        <div class="garden-toolbar reveal-on-scroll">
+          <div class="garden-counter" id="garden-counter">
+            <span class="counter-icon" aria-hidden="true">🌷</span>
+            <span>Đã đánh thức: <strong id="bloomed-count">0</strong> / <strong id="total-flowers-count">8</strong> bông hoa</span>
+          </div>
+          <button type="button" class="btn-glass-small" id="btn-bloom-all">
+            <span>Đánh thức cả khu vườn ✨</span>
+          </button>
+        </div>
+
+        <!-- Hộp hiển thị lời chúc khi chạm vào hoa -->
+        <div class="garden-wish-banner glass-card reveal-on-scroll" id="garden-wish-banner" aria-live="polite">
+          <div class="wish-flower-tag" id="wish-flower-tag">🌸 Chạm vào một bông hoa bất kỳ bên dưới</div>
+          <blockquote class="wish-quote-text" id="garden-wish-text">
+            “Hãy chạm nhẹ vào những đóa hồng, tulip, hướng dương hay cúc họa mi trong khu vườn ánh sáng để lắng nghe lời thì thầm của ngày 20/10...”
+          </blockquote>
+          <div class="wish-quote-meta" id="garden-wish-meta">Mỗi lần chạm là một lời chúc mới trong số 18+ thông điệp yêu thương</div>
+        </div>
+
+        <!-- Khu vườn hoa tương tác SVG & Bươm bướm bay lượn -->
+        <div class="magical-garden-stage reveal-on-scroll" id="magical-garden-stage">
+          <!-- Những chú bướm phát sáng bay lượn -->
+          <div class="butterflies-layer" aria-hidden="true">
+            <div class="butterfly bf-1">
+              <svg viewBox="0 0 60 50" class="bf-svg">
+                <path class="wing-left" d="M30 25 C12 2 0 12 8 28 C2 38 16 46 30 30 Z" fill="url(#bfGrad1)"/>
+                <path class="wing-right" d="M30 25 C48 2 60 12 52 28 C58 38 44 46 30 30 Z" fill="url(#bfGrad1)"/>
+                <defs>
+                  <linearGradient id="bfGrad1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffd9ec"/>
+                    <stop offset="100%" stop-color="#f590c2"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="butterfly bf-2">
+              <svg viewBox="0 0 60 50" class="bf-svg">
+                <path class="wing-left" d="M30 25 C12 2 0 12 8 28 C2 38 16 46 30 30 Z" fill="#e5c2ff"/>
+                <path class="wing-right" d="M30 25 C48 2 60 12 52 28 C58 38 44 46 30 30 Z" fill="#c792f5"/>
+              </svg>
+            </div>
+            <div class="butterfly bf-3">
+              <svg viewBox="0 0 60 50" class="bf-svg">
+                <path class="wing-left" d="M30 25 C12 2 0 12 8 28 C2 38 16 46 30 30 Z" fill="#fff0b8"/>
+                <path class="wing-right" d="M30 25 C48 2 60 12 52 28 C58 38 44 46 30 30 Z" fill="#f5c66b"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Lưới 8 bông hoa tương tác (Hoa hồng, Tulip, Hướng dương, Cúc, Hoa cách điệu) -->
+          <div class="flowers-bed" id="flowers-bed">
+            <!-- JS sẽ khởi tạo chi tiết 8 bông hoa SVG đa lớp cánh nở mượt mà -->
+          </div>
+
+          <!-- Thảm cỏ ánh sáng đom đóm -->
+          <div class="garden-meadow-glow" aria-hidden="true"></div>
+        </div>
+
+        <div class="chapter-actions reveal-on-scroll">
+          <button type="button" class="btn-magical-next" data-goto="4">
+            <span>Ngước nhìn Bầu Trời Điều Ước 🌙</span>
+            <span class="arrow-down" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CHƯƠNG 4 — BẦU TRỜI ĐIỀU ƯỚC
+         ======================================================================= -->
+    <section id="chapter-4" class="chapter-section chapter-wishes" data-chapter="4" aria-label="Chương 4: Bầu trời điều ước">
+      <div class="chapter-container">
+        <div class="chapter-eyebrow reveal-on-scroll">
+          <span>CHƯƠNG IV • BẦU TRỜI ĐIỀU ƯỚC</span>
+        </div>
+
+        <h2 class="section-title reveal-on-scroll">Gửi Điều Ước Lên Chòm Sao 20/10</h2>
+        <p class="section-subtitle reveal-on-scroll">
+          Dưới ánh trăng dịu nhẹ đêm nay, mỗi điều ước của cậu sẽ hóa thành một vì sao lấp lánh và hòa vào ngân hà kỳ diệu.
+        </p>
+
+        <!-- Khung cảnh bầu trời đêm + mặt trăng + chòm sao tương tác -->
+        <div class="night-sky-stage reveal-on-scroll" id="night-sky-stage">
+          <!-- Mặt trăng lưỡi liềm phát quang -->
+          <div class="crescent-moon-wrap" aria-hidden="true">
+            <div class="moon-halo"></div>
+            <svg class="crescent-moon-svg" viewBox="0 0 120 120">
+              <defs>
+                <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fffdf5"/>
+                  <stop offset="60%" stop-color="#fce8b2"/>
+                  <stop offset="100%" stop-color="#dfb15b"/>
+                </linearGradient>
+              </defs>
+              <path d="M75,18 A44,44 0 1,0 102,84 A36,36 0 1,1 75,18 Z" fill="url(#moonGrad)"/>
+            </svg>
+          </div>
+
+          <!-- Canvas vẽ đường bay cong của ngôi sao ước nguyện & các chòm sao -->
+          <canvas id="wish-sky-canvas" class="wish-sky-canvas" aria-label="Bầu trời chòm sao điều ước"></canvas>
+
+          <!-- Chú thích trên bầu trời -->
+          <div class="sky-constellation-counter">
+            <span>🌟 Số ngôi sao điều ước trên bầu trời: <strong id="star-wish-count">5</strong></span>
+          </div>
+
+          <!-- Tooltip hiển thị nội dung khi chạm vào một ngôi sao trên bầu trời -->
+          <div class="star-wish-tooltip" id="star-wish-tooltip" hidden></div>
+        </div>
+
+        <!-- Khung nhập điều ước -->
+        <div class="wish-form-card glass-card reveal-on-scroll">
+          <label for="wish-input" class="wish-prompt-title">
+            “Nếu được gửi một điều ước cho ngày hôm nay, cậu sẽ ước điều gì?”
+          </label>
+
+          <!-- Gợi ý nhanh -->
+          <div class="wish-suggestions" aria-label="Gợi ý điều ước nhanh">
+            <button type="button" class="wish-chip" data-wish="Luôn rạng rỡ, bình an và đạt mọi mục tiêu học tập trong năm nay!">✨ Học tập rực rỡ</button>
+            <button type="button" class="wish-chip" data-wish="Mãi giữ được nụ cười tươi tắn và những kỷ niệm thanh xuân thật đẹp bên lớp mình!">🌷 Thanh xuân đáng nhớ</button>
+            <button type="button" class="wish-chip" data-wish="Mọi dự định và ước mơ thầm kín đều sớm đơm hoa kết trái!">💫 Ước mơ thành hiện thực</button>
+            <button type="button" class="wish-chip" data-wish="Gia đình, bạn bè và bản thân luôn ngập tràn sức khỏe, hạnh phúc và yêu thương!">💖 Trọn vẹn yêu thương</button>
+          </div>
+
+          <form id="wish-form" class="wish-input-group" novalidate>
+            <input
+              type="text"
+              id="wish-input"
+              class="wish-input"
+              placeholder="Viết điều ước của cậu vào đây... (ví dụ: Đạt học bổng và đi du lịch cùng hội bạn thân ✨)"
+              maxlength="160"
+              autocomplete="off"
+            />
+            <button type="submit" class="btn-magical-primary btn-send-wish" id="btn-send-wish">
+              <span class="btn-shimmer" aria-hidden="true"></span>
+              <span class="btn-text">Gửi điều ước lên bầu trời 🌟</span>
+            </button>
+          </form>
+
+          <!-- Thông điệp phản hồi khi ngôi sao bay lên -->
+          <div class="wish-confirmation" id="wish-confirmation" role="status" aria-live="polite" hidden>
+            <span class="confirm-sparkle" aria-hidden="true">✨</span>
+            <p class="confirm-text">Mong rằng điều ước của cậu sẽ sớm thành hiện thực. ✨</p>
+          </div>
+
+          <p class="privacy-note">
+            🔒 Điều ước của cậu được giữ kín hoàn toàn trên trình duyệt này và chỉ gửi lên bầu trời sao của riêng cậu.
+          </p>
+        </div>
+
+        <div class="chapter-actions reveal-on-scroll">
+          <button type="button" class="btn-magical-next" data-goto="5">
+            <span>Khám phá 6 Hộp Quà Bất Ngờ 🎁</span>
+            <span class="arrow-down" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CHƯƠNG 5 — MÓN QUÀ BẤT NGỜ
+         ======================================================================= -->
+    <section id="chapter-5" class="chapter-section chapter-gifts" data-chapter="5" aria-label="Chương 5: Món quà bất ngờ">
+      <div class="chapter-container">
+        <div class="chapter-eyebrow reveal-on-scroll">
+          <span>CHƯƠNG V • MÓN QUÀ BẤT NGỜ</span>
+        </div>
+
+        <h2 class="section-title reveal-on-scroll">Sáu Chiếc Hộp Của Niềm Vui Tinh Thần</h2>
+        <p class="section-subtitle reveal-on-scroll">
+          Chúng tớ đã chuẩn bị 6 món quà tinh thần mang sắc màu khác nhau. Hãy chọn một hộp quà cậu yêu thích nhất (hoặc mở hết cả 6 hộp!) để khám phá điều bất ngờ bên trong nhé.
+        </p>
+
+        <div class="gifts-progress-bar reveal-on-scroll">
+          <span>🎁 Đã khám phá: <strong id="opened-gifts-count">0</strong> / 6 hộp quà bí ẩn</span>
+        </div>
+
+        <!-- Lưới 6 hộp quà 3D -->
+        <div class="mystery-gifts-grid reveal-on-scroll" id="mystery-gifts-grid">
+          <!-- JS tạo 6 hộp quà 3D với màu sắc, biểu tượng và hiệu ứng bật nắp -->
+        </div>
+
+        <div class="chapter-actions reveal-on-scroll">
+          <button type="button" class="btn-magical-next" data-goto="6">
+            <span>Đến Chương Cuối: Lời Kết Đặc Biệt 🌅</span>
+            <span class="arrow-down" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CHƯƠNG 6 — LỜI KẾT ĐẶC BIỆT
+         ======================================================================= -->
+    <section id="chapter-6" class="chapter-section chapter-finale" data-chapter="6" aria-label="Chương 6: Lời kết đặc biệt">
+      <!-- Ánh sáng bình minh pastel dịu nhẹ -->
+      <div class="dawn-rays-backdrop" aria-hidden="true">
+        <div class="dawn-ray ray-1"></div>
+        <div class="dawn-ray ray-2"></div>
+        <div class="dawn-ray ray-3"></div>
+      </div>
+
+      <div class="chapter-container">
+        <div class="chapter-eyebrow reveal-on-scroll">
+          <span>CHƯƠNG VI • LỜI KẾT ĐẶC BIỆT</span>
+        </div>
+
+        <!-- Trái tim 3D kết hợp Bó Hoa Lớn ở giữa màn hình -->
+        <div class="finale-centerpiece reveal-on-scroll" id="finale-centerpiece">
+          <div class="heart-3d-aura"></div>
+          <div class="heart-bouquet-showcase">
+            <div class="crystal-heart-3d" aria-hidden="true">
+              <svg viewBox="0 0 200 185" class="heart-svg">
+                <defs>
+                  <linearGradient id="heartGlowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fff0f6"/>
+                    <stop offset="45%" stop-color="#ff8fb8"/>
+                    <stop offset="100%" stop-color="#d93870"/>
+                  </linearGradient>
+                  <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                  </filter>
+                </defs>
+                <path filter="url(#softGlow)" d="M100 170 C100 170 18 116 18 58 C18 28 42 10 68 10 C85 10 95 20 100 32 C105 20 115 10 132 10 C158 10 182 28 182 58 C182 116 100 170 100 170 Z" fill="url(#heartGlowGrad)" stroke="#fff5f8" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <img src="assets/bouquet.svg" alt="Bó hoa tươi thắm chúc mừng 20/10" class="finale-bouquet-img" />
+          </div>
+        </div>
+
+        <!-- Thông điệp kết thúc giàu cảm xúc -->
+        <article class="glass-card finale-message-card reveal-on-scroll" id="finale-message-card">
+          <p class="finale-line finale-lead" id="finale-line-1">
+            Gửi đến những bông hoa xinh đẹp của lớp chúng mình...
+          </p>
+          <p class="finale-line" id="finale-line-2">
+            Cảm ơn các cậu vì đã góp phần làm cho những năm tháng đại học trở nên vui vẻ, đáng nhớ và đầy màu sắc.
+          </p>
+          <p class="finale-line" id="finale-line-3">
+            Chúc các cậu không chỉ có một ngày 20/10 thật đẹp, mà cả 365 ngày đều được yêu thương, hạnh phúc và tự do theo đuổi những điều mình mong muốn.
+          </p>
+          <h2 class="finale-line finale-climax" id="finale-line-4">
+            Happy Vietnamese Women's Day! 💐
+          </h2>
+        </article>
+
+        <!-- Sân khấu các hạt sáng hội tụ thành số "20/10" -->
+        <div class="particle-number-stage reveal-on-scroll" id="particle-number-stage">
+          <canvas id="finale-number-canvas" width="520" height="180" aria-label="Hạt ánh sáng hội tụ thành số 20/10"></canvas>
+          <p class="particle-stage-caption">Di chuột hoặc chạm vào các hạt ánh sáng 20/10 để xem vũ điệu lấp lánh ✨</p>
+        </div>
+
+        <!-- Nút Trải nghiệm lại & Lưu thiệp kỷ niệm -->
+        <div class="finale-actions reveal-on-scroll">
+          <button type="button" class="btn-magical-primary" id="btn-replay-journey">
+            <span class="btn-shimmer" aria-hidden="true"></span>
+            <span class="btn-text">Trải nghiệm lại điều kỳ diệu ✨</span>
+          </button>
+          <button type="button" class="btn-glass-gold" id="btn-download-card">
+            <span>Tạo &amp; Tải thiệp kỷ niệm 20/10 📸</span>
+          </button>
+        </div>
+
+        <footer class="finale-footer">
+          <p>Được chuẩn bị bằng tất cả sự trân trọng dành tặng các bạn nữ <strong id="footer-class-name">Lớp Đại Học Của Chúng Mình</strong> • 20/10</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       MODAL HIỂN THỊ MÓN QUÀ TINH THẦN (CHƯƠNG 5)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="gift-modal" role="dialog" aria-modal="true" aria-labelledby="gift-modal-title" hidden>
+    <div class="modal-glass-card gift-modal-card">
+      <button type="button" class="modal-close-btn" id="btn-close-gift-modal" aria-label="Đóng cửa sổ quà tặng">✕</button>
+      <div class="gift-modal-badge" id="gift-modal-badge">MÓN QUÀ TINH THẦN SỐ 1</div>
+      <div class="gift-modal-illustration" id="gift-modal-illustration">
+        <!-- Minh họa động SVG riêng cho từng món quà -->
+      </div>
+      <h3 class="gift-modal-title" id="gift-modal-title">Một bó hoa rực rỡ</h3>
+      <p class="gift-modal-recipient" id="gift-modal-recipient"></p>
+      <p class="gift-modal-message" id="gift-modal-message"></p>
+      <div class="gift-modal-actions">
+        <button type="button" class="btn-magical-primary" id="btn-explore-more-gifts">
+          <span class="btn-shimmer" aria-hidden="true"></span>
+          <span class="btn-text">Khám phá thêm 🎁</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL CÁ NHÂN HÓA TÊN NGƯỜI NHẬN
+       ========================================================================= -->
+  <div class="modal-backdrop" id="personalize-modal" role="dialog" aria-modal="true" aria-labelledby="personalize-modal-title" hidden>
+    <div class="modal-glass-card personalize-modal-card">
+      <button type="button" class="modal-close-btn" id="btn-close-personalize-modal" aria-label="Đóng cửa sổ chọn tên">✕</button>
+      <div class="gift-modal-badge">💌 CÁ NHÂN HÓA MÓN QUÀ</div>
+      <h3 class="gift-modal-title" id="personalize-modal-title">Món quà này gửi đến ai?</h3>
+      <p class="personalize-desc">
+        Chọn tên của cậu trong danh sách lớp hoặc nhập tên của cậu để nhận thông điệp và danh hiệu dành riêng cho mình nhé!
+      </p>
+
+      <div class="personalize-list" id="modal-recipient-list">
+        <!-- JS render danh sách tên các bạn nữ -->
+      </div>
+
+      <form id="custom-name-form" class="custom-name-form">
+        <input
+          type="text"
+          id="custom-name-input"
+          class="wish-input"
+          placeholder="Hoặc nhập tên / biệt danh của cậu..."
+          maxlength="50"
+        />
+        <button type="submit" class="btn-glass-gold">Áp dụng ✨</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

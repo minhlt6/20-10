@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" fill="none">
+  <defs>
+    <radialGradient id="aura" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#ffd6e7" stop-opacity="0.75"/>
+      <stop offset="60%" stop-color="#e5c1f5" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wrapPaper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff6f9"/>
+      <stop offset="50%" stop-color="#f9dce8"/>
+      <stop offset="100%" stop-color="#e9bad0"/>
+    </linearGradient>
+    <linearGradient id="ribbonGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff4cc"/>
+      <stop offset="50%" stop-color="#f3c76b"/>
+      <stop offset="100%" stop-color="#c9933b"/>
+    </linearGradient>
+    <linearGradient id="rosePink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffdae7"/>
+      <stop offset="55%" stop-color="#ff85ad"/>
+      <stop offset="100%" stop-color="#d43f74"/>
+    </linearGradient>
+    <linearGradient id="tulipLav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4e6ff"/>
+      <stop offset="55%" stop-color="#c88ef2"/>
+      <stop offset="100%" stop-color="#8b4bc2"/>
+    </linearGradient>
+    <linearGradient id="leafGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a8e6cf"/>
+      <stop offset="100%" stop-color="#3b8d68"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="200" cy="185" r="175" fill="url(#aura)"/>
+
+  <!-- Foliage and Stems -->
+  <path d="M140 240 Q105 160 95 110" stroke="url(#leafGreen)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M200 250 Q200 155 200 85" stroke="url(#leafGreen)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M260 240 Q295 160 305 110" stroke="url(#leafGreen)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M170 245 Q145 165 148 100" stroke="url(#leafGreen)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M230 245 Q255 165 252 100" stroke="url(#leafGreen)" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Leaves -->
+  <path d="M130 200 C85 185 70 145 108 140 C130 140 140 175 130 200 Z" fill="url(#leafGreen)" opacity="0.85"/>
+  <path d="M270 200 C315 185 330 145 292 140 C270 140 260 175 270 200 Z" fill="url(#leafGreen)" opacity="0.85"/>
+
+  <!-- Bouquet Wrapping Paper -->
+  <path d="M98 205 L200 385 L302 205 Q250 230 200 220 Q150 230 98 205 Z" fill="url(#wrapPaper)" stroke="#f5d0e0" stroke-width="2"/>
+  <path d="M122 215 L200 370 L278 215 Q200 245 122 215 Z" fill="#fce8f1" opacity="0.85"/>
+
+  <!-- Flowers -->
+  <!-- Left Tulip -->
+  <g transform="translate(105, 128) rotate(-22)">
+    <path d="M0,-32 C18,-25 22,5 0,20 C-22,5 -18,-25 0,-32 Z" fill="url(#tulipLav)"/>
+    <path d="M-14,-24 C-2,-12 -4,12 -14,16 C-26,6 -24,-15 -14,-24 Z" fill="#dfb5ff"/>
+    <path d="M14,-24 C2,-12 4,12 14,16 C26,6 24,-15 14,-24 Z" fill="#dfb5ff"/>
+  </g>
+
+  <!-- Right Tulip -->
+  <g transform="translate(295, 128) rotate(22)">
+    <path d="M0,-32 C18,-25 22,5 0,20 C-22,5 -18,-25 0,-32 Z" fill="url(#tulipLav)"/>
+    <path d="M-14,-24 C-2,-12 -4,12 -14,16 C-26,6 -24,-15 -14,-24 Z" fill="#dfb5ff"/>
+    <path d="M14,-24 C2,-12 4,12 14,16 C26,6 24,-15 14,-24 Z" fill="#dfb5ff"/>
+  </g>
+
+  <!-- Left Rose -->
+  <g transform="translate(148, 122)">
+    <circle cx="0" cy="0" r="34" fill="url(#rosePink)"/>
+    <path d="M-20,-10 C-8,-28 18,-26 22,-5 C26,16 -6,26 -18,12 C-28,0 -14,-18 2,-14 C14,-10 12,8 0,8 C-8,8 -8,-4 0,-4" stroke="#fff0f5" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Right Rose -->
+  <g transform="translate(252, 122)">
+    <circle cx="0" cy="0" r="34" fill="url(#rosePink)"/>
+    <path d="M-20,-10 C-8,-28 18,-26 22,-5 C26,16 -6,26 -18,12 C-28,0 -14,-18 2,-14 C14,-10 12,8 0,8 C-8,8 -8,-4 0,-4" stroke="#fff0f5" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Center Grand Rose -->
+  <g transform="translate(200, 96)">
+    <circle cx="0" cy="0" r="42" fill="url(#rosePink)"/>
+    <path d="M-25,-12 C-10,-34 22,-32 27,-6 C32,20 -8,32 -22,15 C-34,0 -18,-22 3,-18 C18,-14 15,10 0,10 C-10,10 -10,-5 0,-5" stroke="#fff5f8" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Front Blossoms -->
+  <g transform="translate(172, 172)">
+    <circle cx="0" cy="0" r="24" fill="#ffb8d1"/>
+    <circle cx="0" cy="0" r="8" fill="url(#ribbonGold)"/>
+  </g>
+  <g transform="translate(228, 172)">
+    <circle cx="0" cy="0" r="24" fill="#e2b8ff"/>
+    <circle cx="0" cy="0" r="8" fill="url(#ribbonGold)"/>
+  </g>
+  <g transform="translate(200, 152)">
+    <circle cx="0" cy="0" r="28" fill="#ff94b8"/>
+    <circle cx="0" cy="0" r="9" fill="url(#ribbonGold)"/>
+  </g>
+
+  <!-- Golden Ribbon Bow -->
+  <path d="M168 292 Q200 302 232 292" stroke="url(#ribbonGold)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M200 296 C172 270 155 295 175 312 C188 320 196 304 200 296 Z" fill="url(#ribbonGold)"/>
+  <path d="M200 296 C228 270 245 295 225 312 C212 320 204 304 200 296 Z" fill="url(#ribbonGold)"/>
+  <path d="M196 300 Q180 340 168 362" stroke="url(#ribbonGold)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M204 300 Q220 340 232 362" stroke="url(#ribbonGold)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="200" cy="296" r="8" fill="#fff6d6"/>
+</svg>
