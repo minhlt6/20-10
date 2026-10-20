@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261020-4" />
 </head>
 <body class="in-prologue" data-active-chapter="1">
   <!-- Nền Canvas đa tầng: Sao trời, hạt sáng, hiệu ứng con trỏ, pháo hoa & cánh hoa -->
@@ -142,7 +142,7 @@
       </div>
 
       <!-- Ô nhập tên & Nút Mở Món Quà Bí Mật -->
-      <div class="prologue-cta-wrap" id="prologue-cta-wrap">
+      <div class="prologue-cta-wrap visible" id="prologue-cta-wrap">
         <div class="prologue-name-box" id="prologue-name-box">
           <label for="prologue-name-input" class="prologue-name-label">
             ✨ Nhập tên của bạn để mở món quà nhé:
@@ -153,7 +153,7 @@
             class="prologue-name-input"
             placeholder="Nhập tên của bạn..."
             maxlength="50"
-            autocomplete="name"
+            autocomplete="off"
             required
           />
           <p class="prologue-name-error" id="prologue-name-error" role="alert" hidden>
@@ -164,12 +164,12 @@
           <span class="btn-shimmer" aria-hidden="true"></span>
           <span class="btn-text">Mở món quà bí mật 🎁</span>
         </button>
-        <p class="prologue-hint">Nhập tên rồi chạm vào hộp quà hoặc nút phía trên để bắt đầu</p>
+        <p class="prologue-hint">Bắt buộc nhập tên rồi chạm vào hộp quà hoặc nút phía trên để bắt đầu</p>
       </div>
     </div>
 
-    <!-- Nút bỏ qua phần mở đầu theo yêu cầu kỹ thuật -->
-    <button type="button" class="btn-skip-intro" id="btn-skip-intro">
+    <!-- Ẩn nút bỏ qua để bắt buộc nhập tên mới được sang bước tiếp theo -->
+    <button type="button" class="btn-skip-intro" id="btn-skip-intro" hidden style="display:none;">
       <span>Bỏ qua mở đầu</span>
       <span aria-hidden="true">⏭</span>
     </button>
@@ -616,6 +616,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20261020-4"></script>
 </body>
 </html>
